@@ -1,0 +1,5 @@
+C:/Users/Andrei/Desktop/STB/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/CMakeFiles/User_registration_system.dir
+C:/Users/Andrei/Desktop/STB/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/CMakeFiles/edit_cache.dir
+C:/Users/Andrei/Desktop/STB/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/CMakeFiles/rebuild_cache.dir
+C:/Users/Andrei/Desktop/STB/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/CMakeFiles/User_registration_system_autogen_timestamp_deps.dir
+C:/Users/Andrei/Desktop/STB/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/CMakeFiles/User_registration_system_autogen.dir

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CautaTraseu</class>
+ <widget class="QMainWindow" name="CautaTraseu">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>350</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Arial</family>
+    <pointsize>12</pointsize>
+    <bold>true</bold>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Cauta Traseu</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #121212; color: white;</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLabel" name="labelPlecare">
+      <property name="text">
+       <string>Zonă Plecare:</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="textBoxPlecare">
+      <property name="styleSheet">
+       <string notr="true">background-color: #1E1E1E; color: white; border: 1px solid #4CAF50; border-radius: 5px; padding: 5px;</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLabel" name="labelDestinatie">
+      <property name="text">
+       <string>Destinație:</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QLineEdit" name="textBoxDestinatie">
+      <property name="styleSheet">
+       <string notr="true">background-color: #1E1E1E; color: white; border: 1px solid #4CAF50; border-radius: 5px; padding: 5px;</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QPushButton" name="cautaTraseuButton">
+      <property name="styleSheet">
+       <string notr="true">background-color: #4CAF50; color: white; border-radius: 5px; font-weight: bold; font-size: 14px; padding: 10px; transition: background-color 0.3s ease;</string>
+      </property>
+      <property name="text">
+       <string>Caută Traseu</string>
+      </property>
+     </widget>
+    </item>
+    <!-- Adăugăm un buton pentru "Back" -->
+    <item>
+     <widget class="QPushButton" name="backButton">
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>270</y>
+        <width>100</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Back</string>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: red; color: white; border-radius: 5px; font-weight: bold; font-size: 14px; padding: 10px;</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>500</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
+

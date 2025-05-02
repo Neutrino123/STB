@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>RezultatCautareTraseu</class>
+ <widget class="QWidget" name="RezultatCautareTraseu">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>50</height>
+   </rect>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #1E1E1E; color: white; border-radius: 5px; padding: 5px;</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <item>
+    <widget class="QLabel" name="traseuLabel">
+     <property name="styleSheet">
+      <string notr="true">font-size: 16px; font-weight: bold; color: #4CAF50;</string>
+     </property>
+     <property name="text">
+      <string>Autobuz 101</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="buyTicketButton">
+     <property name="styleSheet">
+      <string notr="true">background-color: #4CAF50; color: white; border-radius: 5px; padding: 5px 10px; font-size: 14px;</string>
+     </property>
+     <property name="text">
+      <string>Cumpără Bilet</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
