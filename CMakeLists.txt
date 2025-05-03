@@ -47,6 +47,20 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         RezultatePage.ui
         TicketListPage.ui
         TicketListPage.h TicketListPage.cpp
+        ControlorPage.ui
+        ControlorPage.h ControlorPage.cpp
+        oferaAmenda.ui
+        OferaAmenda.h OferaAmenda.cpp
+        VerificaBilet.ui
+        VerificaBilet.h VerificaBilet.cpp
+        ErrorBox.ui
+        SuccessBox.ui
+        ErrorBox.h ErrorBox.cpp
+        SuccessBox.h SuccessBox.cpp
+        AmenziListPage.ui
+        AmenziListPage.h AmenziListPage.cpp
+        AmendaWidget.ui
+        AmendaWidget.h AmendaWidget.cpp
 
 
 

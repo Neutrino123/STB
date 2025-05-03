@@ -6,6 +6,10 @@
 #include "MainPage.h"
 #include <QRegularExpression>
 #include <QCryptographicHash>
+#include "SuccessBox.h"
+#include "ErrorBox.h"
+
+class ControlorPage;
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class LoginPage; }
@@ -29,6 +33,9 @@ private:
     Ui::LoginPage *ui;
     RegisterPage* ptrRegisterPage;
     MainPage* ptrMainPage;
+    ControlorPage* ptrControlorPage;
+    SuccessBox* successBox;
+    ErrorBox* errorBox;
 
 };
 

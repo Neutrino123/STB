@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>VerificaBilet</class>
+ <widget class="QWidget" name="VerificaBilet">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>200</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Verifica Bilet</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #121212; color: white;</string>
+  </property>
+  <widget class="QLabel" name="labelIdBilet">
+   <property name="geometry">
+    <rect>
+     <x>40</x>
+     <y>40</y>
+     <width>100</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>ID Bilet:</string>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="lineEditIdBilet">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>40</y>
+     <width>200</width>
+     <height>30</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="verificaButton">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>120</y>
+     <width>100</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: #4CAF50; color: white; font-weight: bold; border-radius: 5px;</string>
+   </property>
+   <property name="text">
+    <string>Verifica</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="renuntaButton">
+   <property name="geometry">
+    <rect>
+     <x>220</x>
+     <y>120</y>
+     <width>100</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: #FF0000; color: white; font-weight: bold; border-radius: 5px;</string>
+   </property>
+   <property name="text">
+    <string>Renunta</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

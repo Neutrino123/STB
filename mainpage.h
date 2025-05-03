@@ -28,6 +28,7 @@ private slots:
     void on_cumparaBiletButton_clicked();
     void on_veziBiletButton_clicked();
     void on_cautaTraseuButton_clicked();
+    void on_veziAmenziButton_clicked();
 
 
 private:

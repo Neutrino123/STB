@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>OferaAmenda</class>
+ <widget class="QWidget" name="OferaAmenda">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Arial</family>
+    <pointsize>12</pointsize>
+    <bold>true</bold>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Formular Amenzi</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #121212; color: white;</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QFormLayout" name="formLayout">
+     <item row="0" column="0">
+      <widget class="QLabel" name="label_cnp">
+       <property name="text">
+        <string>CNP</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="lineEdit_cnp"/>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_suma">
+       <property name="text">
+        <string>Suma</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="lineEdit_suma"/>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_motiv">
+       <property name="text">
+        <string>Motivul</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLineEdit" name="lineEdit_motiv"/>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_buttons">
+     <item>
+      <widget class="QPushButton" name="aplicaButton">
+       <property name="styleSheet">
+        <string notr="true">background-color: #4CAF50; color: white; border-radius: 5px; font-weight: bold; padding: 8px;</string>
+       </property>
+       <property name="text">
+        <string>Aplica</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="renuntaButton">
+       <property name="styleSheet">
+        <string notr="true">background-color: #FF0000; color: white; border-radius: 5px; font-weight: bold; padding: 8px;</string>
+       </property>
+       <property name="text">
+        <string>Renunta</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

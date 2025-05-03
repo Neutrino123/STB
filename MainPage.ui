@@ -114,7 +114,7 @@
      <string>Vezi Bilet</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="amenziButton">
+   <widget class="QPushButton" name="veziAmenziButton">
     <property name="geometry">
      <rect>
       <x>240</x>

@@ -400,9 +400,11 @@ C:/Users/Andrei/Desktop/STB/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/User_regis
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/vadefs.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h \
   C:/Users/Andrei/Desktop/STB/DatabaseHeader.h \
+  C:/Users/Andrei/Desktop/STB/ErrorBox.h \
   C:/Users/Andrei/Desktop/STB/MainPage.h \
   C:/Users/Andrei/Desktop/STB/RegisterPage.h \
   C:/Users/Andrei/Desktop/STB/RezultatePage.h \
   C:/Users/Andrei/Desktop/STB/ServerConnection.h \
+  C:/Users/Andrei/Desktop/STB/SuccessBox.h \
   C:/Users/Andrei/Desktop/STB/TicketListPage.h \
   C:/Users/Andrei/Desktop/STB/ticketwidget.h

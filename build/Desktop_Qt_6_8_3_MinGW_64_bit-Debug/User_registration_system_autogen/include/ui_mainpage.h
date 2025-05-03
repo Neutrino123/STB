@@ -29,7 +29,7 @@ public:
     QPushButton *cumparaBiletButton;
     QPushButton *cautaTraseuButton;
     QPushButton *veziBiletButton;
-    QPushButton *amenziButton;
+    QPushButton *veziAmenziButton;
     QPushButton *logoutButton;
     QMenuBar *menubar;
     QMenu *menuLogged_in;
@@ -77,12 +77,12 @@ public:
         sizePolicy.setHeightForWidth(veziBiletButton->sizePolicy().hasHeightForWidth());
         veziBiletButton->setSizePolicy(sizePolicy);
         veziBiletButton->setStyleSheet(QString::fromUtf8("background-color: #4CAF50; color: white; border-radius: 5px; font-weight: bold; padding: 10px; text-align: center; font-size: 14px; transition: background-color 0.3s ease;"));
-        amenziButton = new QPushButton(centralwidget);
-        amenziButton->setObjectName("amenziButton");
-        amenziButton->setGeometry(QRect(240, 290, 120, 40));
-        sizePolicy.setHeightForWidth(amenziButton->sizePolicy().hasHeightForWidth());
-        amenziButton->setSizePolicy(sizePolicy);
-        amenziButton->setStyleSheet(QString::fromUtf8("background-color: #4CAF50; color: white; border-radius: 5px; font-weight: bold; padding: 10px; text-align: center; font-size: 14px; transition: background-color 0.3s ease;"));
+        veziAmenziButton = new QPushButton(centralwidget);
+        veziAmenziButton->setObjectName("veziAmenziButton");
+        veziAmenziButton->setGeometry(QRect(240, 290, 120, 40));
+        sizePolicy.setHeightForWidth(veziAmenziButton->sizePolicy().hasHeightForWidth());
+        veziAmenziButton->setSizePolicy(sizePolicy);
+        veziAmenziButton->setStyleSheet(QString::fromUtf8("background-color: #4CAF50; color: white; border-radius: 5px; font-weight: bold; padding: 10px; text-align: center; font-size: 14px; transition: background-color 0.3s ease;"));
         logoutButton = new QPushButton(centralwidget);
         logoutButton->setObjectName("logoutButton");
         logoutButton->setGeometry(QRect(470, 380, 120, 40));
@@ -114,7 +114,7 @@ public:
         cumparaBiletButton->setText(QCoreApplication::translate("MainPage", "Cumpara Bilet", nullptr));
         cautaTraseuButton->setText(QCoreApplication::translate("MainPage", "Cauta Traseu", nullptr));
         veziBiletButton->setText(QCoreApplication::translate("MainPage", "Vezi Bilet", nullptr));
-        amenziButton->setText(QCoreApplication::translate("MainPage", "Amenzi", nullptr));
+        veziAmenziButton->setText(QCoreApplication::translate("MainPage", "Amenzi", nullptr));
         logoutButton->setText(QCoreApplication::translate("MainPage", "Logout", nullptr));
         menuLogged_in->setTitle(QCoreApplication::translate("MainPage", "Logged in", nullptr));
     } // retranslateUi

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SuccessBox</class>
+ <widget class="QDialog" name="SuccessBox">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>350</width>
+    <height>150</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Succes</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: #1c1c1c; color: white;</string>
+  </property>
+  <widget class="QLabel" name="labelSuccess">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>30</y>
+     <width>310</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">color: #00FF88; font-weight: bold; font-size: 16px;</string>
+   </property>
+   <property name="text">
+    <string>Succes! Operațiunea a fost realizată.</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="buttonClose">
+   <property name="geometry">
+    <rect>
+     <x>120</x>
+     <y>90</y>
+     <width>100</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>OK</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-color: #00CC66; color: white; font-weight: bold; border-radius: 5px;</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -3,6 +3,7 @@
 #include "LoginPage.h"
 #include "CautaTraseu.h"
 #include "TicketWidget.h"
+#include "AmenziListPage.h"
 
 
 MainPage::MainPage(QWidget *parent) :
@@ -25,6 +26,34 @@ void MainPage::on_logoutButton_clicked(){
     LoginPage* ptrLoginPage = new LoginPage();
     ptrLoginPage->show();
     this->close();
+}
+
+void MainPage::on_veziAmenziButton_clicked(){
+
+    //vom face de fiecare data un serverConnection pentru a primi amenzile;
+    // ServerConnection* server = new ServerConnection();
+    // server->connectToServer("127.0.0.1", 12345);
+    // QString data = "veziAmenzi|";
+    // data += '\0';
+
+    // server->sendData(data);
+
+    // QString response = server->receiveData();
+    // if(response != ""){
+
+
+    // }
+
+    AmenziListPage* amenziPage = new AmenziListPage();
+
+    AmendaWidget* amenda1 = new AmendaWidget();
+    AmendaWidget* amenda2 = new AmendaWidget();
+    amenziPage->adaugaAmenda(amenda1);
+    amenziPage->adaugaAmenda(amenda2);
+
+    qDebug()<<"Am ajuns aici";
+
+    amenziPage->show();
 }
 
  void MainPage::on_cumparaBiletButton_clicked(){

@@ -628,13 +628,23 @@ User_registration_system_autogen/timestamp: \
 	C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/time.h \
 	C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/vadefs.h \
 	C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h \
+	C:/Users/Andrei/Desktop/STB/AmendaWidget.cpp \
+	C:/Users/Andrei/Desktop/STB/AmendaWidget.h \
+	C:/Users/Andrei/Desktop/STB/AmenziListPage.cpp \
+	C:/Users/Andrei/Desktop/STB/AmenziListPage.h \
 	C:/Users/Andrei/Desktop/STB/CMakeLists.txt \
 	C:/Users/Andrei/Desktop/STB/CautaTraseu.cpp \
 	C:/Users/Andrei/Desktop/STB/CautaTraseu.h \
+	C:/Users/Andrei/Desktop/STB/ControlorPage.cpp \
+	C:/Users/Andrei/Desktop/STB/ControlorPage.h \
 	C:/Users/Andrei/Desktop/STB/DatabaseHeader.h \
+	C:/Users/Andrei/Desktop/STB/ErrorBox.cpp \
+	C:/Users/Andrei/Desktop/STB/ErrorBox.h \
 	C:/Users/Andrei/Desktop/STB/LoginPage.cpp \
 	C:/Users/Andrei/Desktop/STB/LoginPage.h \
 	C:/Users/Andrei/Desktop/STB/MainPage.cpp \
+	C:/Users/Andrei/Desktop/STB/OferaAmenda.cpp \
+	C:/Users/Andrei/Desktop/STB/OferaAmenda.h \
 	C:/Users/Andrei/Desktop/STB/RegisterPage.cpp \
 	C:/Users/Andrei/Desktop/STB/RegisterPage.h \
 	C:/Users/Andrei/Desktop/STB/RezultatCautareTraseu.cpp \
@@ -643,10 +653,14 @@ User_registration_system_autogen/timestamp: \
 	C:/Users/Andrei/Desktop/STB/RezultatePage.h \
 	C:/Users/Andrei/Desktop/STB/ServerConnection.cpp \
 	C:/Users/Andrei/Desktop/STB/ServerConnection.h \
+	C:/Users/Andrei/Desktop/STB/SuccessBox.cpp \
+	C:/Users/Andrei/Desktop/STB/SuccessBox.h \
 	C:/Users/Andrei/Desktop/STB/TicketListPage.cpp \
 	C:/Users/Andrei/Desktop/STB/TicketListPage.h \
 	C:/Users/Andrei/Desktop/STB/TicketWidget.cpp \
 	C:/Users/Andrei/Desktop/STB/TicketWidget.h \
+	C:/Users/Andrei/Desktop/STB/VerificaBilet.cpp \
+	C:/Users/Andrei/Desktop/STB/VerificaBilet.h \
 	C:/Users/Andrei/Desktop/STB/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/.qtc/package-manager/auto-setup.cmake \
 	C:/Users/Andrei/Desktop/STB/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/CMakeFiles/3.30.5/CMakeCXXCompiler.cmake \
 	C:/Users/Andrei/Desktop/STB/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/CMakeFiles/3.30.5/CMakeRCCompiler.cmake \
@@ -656,12 +670,19 @@ User_registration_system_autogen/timestamp: \
 	C:/Users/Andrei/Desktop/STB/mainpage.h \
 	C:/Users/Andrei/Desktop/STB/utils.cpp \
 	C:/Users/Andrei/Desktop/STB/utils.h \
+	C:/Users/Andrei/Desktop/STB/AmendaWidget.ui \
+	C:/Users/Andrei/Desktop/STB/AmenziListPage.ui \
 	C:/Users/Andrei/Desktop/STB/CautaTraseu.ui \
+	C:/Users/Andrei/Desktop/STB/ControlorPage.ui \
+	C:/Users/Andrei/Desktop/STB/ErrorBox.ui \
 	C:/Users/Andrei/Desktop/STB/LoginPage.ui \
 	C:/Users/Andrei/Desktop/STB/MainPage.ui \
 	C:/Users/Andrei/Desktop/STB/RegisterPage.ui \
 	C:/Users/Andrei/Desktop/STB/RezultatCautareTraseu.ui \
 	C:/Users/Andrei/Desktop/STB/RezultatePage.ui \
+	C:/Users/Andrei/Desktop/STB/SuccessBox.ui \
 	C:/Users/Andrei/Desktop/STB/TicketListPage.ui \
 	C:/Users/Andrei/Desktop/STB/TicketWidget.ui \
+	C:/Users/Andrei/Desktop/STB/VerificaBilet.ui \
+	C:/Users/Andrei/Desktop/STB/oferaAmenda.ui \
 	C:/Qt/Tools/CMake_64/bin/cmake.exe

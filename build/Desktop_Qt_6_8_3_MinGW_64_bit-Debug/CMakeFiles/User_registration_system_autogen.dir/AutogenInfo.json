@@ -361,9 +361,27 @@
 	"HEADERS" : 
 	[
 		[
+			"C:/Users/Andrei/Desktop/STB/AmendaWidget.h",
+			"MU",
+			"EWIEGA46WW/moc_AmendaWidget.cpp",
+			null
+		],
+		[
+			"C:/Users/Andrei/Desktop/STB/AmenziListPage.h",
+			"MU",
+			"EWIEGA46WW/moc_AmenziListPage.cpp",
+			null
+		],
+		[
 			"C:/Users/Andrei/Desktop/STB/CautaTraseu.h",
 			"MU",
 			"EWIEGA46WW/moc_CautaTraseu.cpp",
+			null
+		],
+		[
+			"C:/Users/Andrei/Desktop/STB/ControlorPage.h",
+			"MU",
+			"EWIEGA46WW/moc_ControlorPage.cpp",
 			null
 		],
 		[
@@ -373,9 +391,21 @@
 			null
 		],
 		[
+			"C:/Users/Andrei/Desktop/STB/ErrorBox.h",
+			"MU",
+			"EWIEGA46WW/moc_ErrorBox.cpp",
+			null
+		],
+		[
 			"C:/Users/Andrei/Desktop/STB/LoginPage.h",
 			"MU",
 			"EWIEGA46WW/moc_LoginPage.cpp",
+			null
+		],
+		[
+			"C:/Users/Andrei/Desktop/STB/OferaAmenda.h",
+			"MU",
+			"EWIEGA46WW/moc_OferaAmenda.cpp",
 			null
 		],
 		[
@@ -403,6 +433,12 @@
 			null
 		],
 		[
+			"C:/Users/Andrei/Desktop/STB/SuccessBox.h",
+			"MU",
+			"EWIEGA46WW/moc_SuccessBox.cpp",
+			null
+		],
+		[
 			"C:/Users/Andrei/Desktop/STB/TicketListPage.h",
 			"MU",
 			"EWIEGA46WW/moc_TicketListPage.cpp",
@@ -412,6 +448,12 @@
 			"C:/Users/Andrei/Desktop/STB/TicketWidget.h",
 			"MU",
 			"EWIEGA46WW/moc_TicketWidget.cpp",
+			null
+		],
+		[
+			"C:/Users/Andrei/Desktop/STB/VerificaBilet.h",
+			"MU",
+			"EWIEGA46WW/moc_VerificaBilet.cpp",
 			null
 		],
 		[
@@ -504,15 +546,22 @@
 	"SETTINGS_FILE" : "C:/Users/Andrei/Desktop/STB/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/CMakeFiles/User_registration_system_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[ "C:/Users/Andrei/Desktop/STB/AmendaWidget.cpp", "MU", null ],
+		[ "C:/Users/Andrei/Desktop/STB/AmenziListPage.cpp", "MU", null ],
 		[ "C:/Users/Andrei/Desktop/STB/CautaTraseu.cpp", "MU", null ],
+		[ "C:/Users/Andrei/Desktop/STB/ControlorPage.cpp", "MU", null ],
+		[ "C:/Users/Andrei/Desktop/STB/ErrorBox.cpp", "MU", null ],
 		[ "C:/Users/Andrei/Desktop/STB/LoginPage.cpp", "MU", null ],
 		[ "C:/Users/Andrei/Desktop/STB/MainPage.cpp", "MU", null ],
+		[ "C:/Users/Andrei/Desktop/STB/OferaAmenda.cpp", "MU", null ],
 		[ "C:/Users/Andrei/Desktop/STB/RegisterPage.cpp", "MU", null ],
 		[ "C:/Users/Andrei/Desktop/STB/RezultatCautareTraseu.cpp", "MU", null ],
 		[ "C:/Users/Andrei/Desktop/STB/RezultatePage.cpp", "MU", null ],
 		[ "C:/Users/Andrei/Desktop/STB/ServerConnection.cpp", "MU", null ],
+		[ "C:/Users/Andrei/Desktop/STB/SuccessBox.cpp", "MU", null ],
 		[ "C:/Users/Andrei/Desktop/STB/TicketListPage.cpp", "MU", null ],
 		[ "C:/Users/Andrei/Desktop/STB/TicketWidget.cpp", "MU", null ],
+		[ "C:/Users/Andrei/Desktop/STB/VerificaBilet.cpp", "MU", null ],
 		[ "C:/Users/Andrei/Desktop/STB/main.cpp", "MU", null ],
 		[ "C:/Users/Andrei/Desktop/STB/utils.cpp", "MU", null ]
 	],

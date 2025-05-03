@@ -4,13 +4,16 @@
 #include "DatabaseHeader.h"
 #include "utils.h"
 #include "ServerConnection.h"
+#include "ControlorPage.h"
 
 LoginPage::LoginPage(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::LoginPage)
 {
     ui->setupUi(this);
-    ptrRegisterPage = new RegisterPage();
+    this->ptrRegisterPage = new RegisterPage();
+    this->errorBox = new ErrorBox();
+    this->successBox = new SuccessBox();
 }
 
 LoginPage::~LoginPage()
@@ -45,16 +48,20 @@ void LoginPage::on_loginButton_clicked()
     response = "success";
     if(response == "success"){
 
-        QMessageBox::information(this, "Success", "Login Successfully");
-        ptrMainPage = new MainPage();
-        ptrMainPage->setUsername(email);
-        ptrMainPage->show();
+        this->successBox->show();
+        this->ptrMainPage = new MainPage();
+        this->ptrMainPage->setUsername(email);
+        this->ptrMainPage->show();
         this->close();
 
     }
-    else{
+    else if (response == "successControlor"){
 
-        QMessageBox::information(this, "Failed", "Email or password is incorrect");
+        this->successBox->show();
+        this->ptrControlorPage = new ControlorPage();
+        this->ptrControlorPage->setUsername(email);
+        this->ptrControlorPage->show();
+        this->close();
 
     }
    // delete server;

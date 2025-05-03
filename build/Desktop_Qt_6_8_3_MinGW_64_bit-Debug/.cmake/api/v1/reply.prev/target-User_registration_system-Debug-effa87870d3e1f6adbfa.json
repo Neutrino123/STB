@@ -76,7 +76,7 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 68,
+				"line" : 82,
 				"parent" : 0
 			},
 			{
@@ -416,18 +416,25 @@
 				18,
 				20,
 				24,
-				26
+				26,
+				30,
+				33,
+				36,
+				39,
+				43,
+				45,
+				48
 			]
 		}
 	],
 	"dependencies" : 
 	[
 		{
-			"backtrace" : 0,
-			"id" : "User_registration_system_autogen::@6890427a1f51a3e7e1df"
+			"id" : "User_registration_system_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
 		},
 		{
-			"id" : "User_registration_system_autogen_timestamp_deps::@6890427a1f51a3e7e1df"
+			"backtrace" : 0,
+			"id" : "User_registration_system_autogen::@6890427a1f51a3e7e1df"
 		}
 	],
 	"id" : "User_registration_system::@6890427a1f51a3e7e1df",
@@ -548,7 +555,14 @@
 				18,
 				20,
 				24,
-				26
+				26,
+				30,
+				33,
+				36,
+				39,
+				43,
+				45,
+				48
 			]
 		},
 		{
@@ -566,13 +580,27 @@
 				23,
 				25,
 				29,
-				30,
-				31,
 				32,
-				33,
-				34,
 				35,
-				36
+				38,
+				42,
+				44,
+				47,
+				50,
+				51,
+				52,
+				53,
+				54,
+				55,
+				56,
+				57,
+				58,
+				59,
+				60,
+				61,
+				62,
+				63,
+				64
 			]
 		},
 		{
@@ -586,21 +614,28 @@
 				21,
 				22,
 				27,
-				28
+				28,
+				31,
+				34,
+				37,
+				40,
+				41,
+				46,
+				49
 			]
 		},
 		{
 			"name" : "",
 			"sourceIndexes" : 
 			[
-				37
+				65
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				38
+				66
 			]
 		}
 	],
@@ -764,6 +799,118 @@
 			"sourceGroupIndex" : 2
 		},
 		{
+			"backtrace" : 4,
+			"path" : "TicketListPage.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "TicketListPage.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "ControlorPage.ui",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "ControlorPage.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "ControlorPage.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "oferaAmenda.ui",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "OferaAmenda.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "OferaAmenda.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "VerificaBilet.ui",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "VerificaBilet.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "VerificaBilet.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "ErrorBox.ui",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "SuccessBox.ui",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "ErrorBox.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "ErrorBox.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "SuccessBox.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "SuccessBox.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "AmenziListPage.ui",
+			"sourceGroupIndex" : 2
+		},
+		{
+			"backtrace" : 4,
+			"path" : "AmenziListPage.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"compileGroupIndex" : 0,
+			"path" : "AmenziListPage.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 4,
+			"path" : "AmendaWidget.ui",
+			"sourceGroupIndex" : 2
+		},
+		{
 			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/User_registration_system_autogen/include/ui_LoginPage.h",
@@ -809,6 +956,48 @@
 			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/User_registration_system_autogen/include/ui_TicketListPage.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/User_registration_system_autogen/include/ui_ControlorPage.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/User_registration_system_autogen/include/ui_oferaAmenda.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/User_registration_system_autogen/include/ui_VerificaBilet.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/User_registration_system_autogen/include/ui_ErrorBox.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/User_registration_system_autogen/include/ui_SuccessBox.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/User_registration_system_autogen/include/ui_AmenziListPage.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/User_registration_system_autogen/include/ui_AmendaWidget.h",
 			"sourceGroupIndex" : 1
 		},
 		{

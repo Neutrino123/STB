@@ -32,8 +32,6 @@ void RezultatCautareTraseu::on_buyTicketButton_clicked(){
 
     QString response = server->receiveData();
 
-
-
     if(response == "success"){
 
         qDebug()<<"Serverul a creat si trimis biletul cu succes";

@@ -1,0 +1,22 @@
+#ifndef AMENDAWIDGET_H
+#define AMENDAWIDGET_H
+
+#include <QWidget>
+
+namespace Ui {
+class AmendaWidget;
+}
+
+class AmendaWidget : public QWidget
+{
+    Q_OBJECT
+
+public:
+    explicit AmendaWidget(QWidget *parent = nullptr);
+    ~AmendaWidget();
+
+private:
+    Ui::AmendaWidget *ui;
+};
+
+#endif
