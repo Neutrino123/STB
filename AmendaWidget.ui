@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>200</width>
-    <height>150</height>
+    <height>200</height>
    </rect>
   </property>
   <property name="styleSheet">
@@ -32,7 +32,7 @@
       <string>AMENDA</string>
      </property>
      <property name="alignment">
-      <set>Qt::AlignmentFlag::AlignCenter</set>
+      <set>Qt::AlignCenter</set>
      </property>
     </widget>
    </item>
@@ -42,7 +42,7 @@
       <string>Suma: 250 RON</string>
      </property>
      <property name="alignment">
-      <set>Qt::AlignmentFlag::AlignCenter</set>
+      <set>Qt::AlignCenter</set>
      </property>
     </widget>
    </item>
@@ -52,7 +52,33 @@
       <string>Motiv: Calatorie fara bilet</string>
      </property>
      <property name="alignment">
-      <set>Qt::AlignmentFlag::AlignCenter</set>
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="platesteButton">
+     <property name="text">
+      <string>Plătește amenda</string>
+     </property>
+     <property name="minimumHeight">
+      <number>30</number>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+        QPushButton {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+        }
+        QPushButton:hover {
+            background-color: #218838;
+        }
+        QPushButton:pressed {
+            background-color: #1e7e34;
+        }
+      </string>
      </property>
     </widget>
    </item>

@@ -15,6 +15,7 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(QT NAMES Qt6 Qt5 COMPONENTS Widgets Sql Network REQUIRED)
 find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets Sql Network REQUIRED)
 
+
 set(PROJECT_SOURCES
     main.cpp
     LoginPage.cpp
@@ -61,6 +62,13 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         AmenziListPage.h AmenziListPage.cpp
         AmendaWidget.ui
         AmendaWidget.h AmendaWidget.cpp
+        icons.qrc
+        NotificationPopup.ui
+        NotificationPopup.h NotificationPopup.cpp
+        NotificationLabel.ui
+        NotificationLabel.h NotificationLabel.cpp
+
+
 
 
 
@@ -84,6 +92,7 @@ target_link_libraries(User_registration_system PRIVATE
     Qt${QT_VERSION_MAJOR}::Widgets
     Qt${QT_VERSION_MAJOR}::Sql
     Qt${QT_VERSION_MAJOR}::Network  # Adăugăm QtNetwork
+
 )
 
 # Setăm proprietăți pentru targetul nostru

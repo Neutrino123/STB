@@ -352,7 +352,8 @@
 		"C:/Qt/6.8.3/mingw_64/lib/cmake/Qt6Network/Qt6QTlsBackendOpenSSLPluginTargets.cmake",
 		"C:/Qt/6.8.3/mingw_64/lib/cmake/Qt6Network/Qt6QTlsBackendOpenSSLPluginTargets-relwithdebinfo.cmake",
 		"C:/Qt/6.8.3/mingw_64/lib/cmake/Qt6Network/Qt6QTlsBackendOpenSSLPluginAdditionalTargetInfo.cmake",
-		"C:/Qt/6.8.3/mingw_64/lib/cmake/Qt6Network/Qt6NetworkVersionlessAliasTargets.cmake"
+		"C:/Qt/6.8.3/mingw_64/lib/cmake/Qt6Network/Qt6NetworkVersionlessAliasTargets.cmake",
+		"C:/Users/Andrei/Desktop/STB/icons.qrc"
 	],
 	"CMAKE_SOURCE_DIR" : "C:/Users/Andrei/Desktop/STB",
 	"CROSS_CONFIG" : false,
@@ -400,6 +401,18 @@
 			"C:/Users/Andrei/Desktop/STB/LoginPage.h",
 			"MU",
 			"EWIEGA46WW/moc_LoginPage.cpp",
+			null
+		],
+		[
+			"C:/Users/Andrei/Desktop/STB/NotificationLabel.h",
+			"MU",
+			"EWIEGA46WW/moc_NotificationLabel.cpp",
+			null
+		],
+		[
+			"C:/Users/Andrei/Desktop/STB/NotificationPopup.h",
+			"MU",
+			"EWIEGA46WW/moc_NotificationPopup.cpp",
 			null
 		],
 		[
@@ -553,6 +566,8 @@
 		[ "C:/Users/Andrei/Desktop/STB/ErrorBox.cpp", "MU", null ],
 		[ "C:/Users/Andrei/Desktop/STB/LoginPage.cpp", "MU", null ],
 		[ "C:/Users/Andrei/Desktop/STB/MainPage.cpp", "MU", null ],
+		[ "C:/Users/Andrei/Desktop/STB/NotificationLabel.cpp", "MU", null ],
+		[ "C:/Users/Andrei/Desktop/STB/NotificationPopup.cpp", "MU", null ],
 		[ "C:/Users/Andrei/Desktop/STB/OferaAmenda.cpp", "MU", null ],
 		[ "C:/Users/Andrei/Desktop/STB/RegisterPage.cpp", "MU", null ],
 		[ "C:/Users/Andrei/Desktop/STB/RezultatCautareTraseu.cpp", "MU", null ],

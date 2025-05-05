@@ -643,6 +643,10 @@ User_registration_system_autogen/timestamp: \
 	C:/Users/Andrei/Desktop/STB/LoginPage.cpp \
 	C:/Users/Andrei/Desktop/STB/LoginPage.h \
 	C:/Users/Andrei/Desktop/STB/MainPage.cpp \
+	C:/Users/Andrei/Desktop/STB/NotificationLabel.cpp \
+	C:/Users/Andrei/Desktop/STB/NotificationLabel.h \
+	C:/Users/Andrei/Desktop/STB/NotificationPopup.cpp \
+	C:/Users/Andrei/Desktop/STB/NotificationPopup.h \
 	C:/Users/Andrei/Desktop/STB/OferaAmenda.cpp \
 	C:/Users/Andrei/Desktop/STB/OferaAmenda.h \
 	C:/Users/Andrei/Desktop/STB/RegisterPage.cpp \
@@ -666,6 +670,7 @@ User_registration_system_autogen/timestamp: \
 	C:/Users/Andrei/Desktop/STB/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/CMakeFiles/3.30.5/CMakeRCCompiler.cmake \
 	C:/Users/Andrei/Desktop/STB/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/CMakeFiles/3.30.5/CMakeSystem.cmake \
 	C:/Users/Andrei/Desktop/STB/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/User_registration_system_autogen/moc_predefs.h \
+	C:/Users/Andrei/Desktop/STB/icons.qrc \
 	C:/Users/Andrei/Desktop/STB/main.cpp \
 	C:/Users/Andrei/Desktop/STB/mainpage.h \
 	C:/Users/Andrei/Desktop/STB/utils.cpp \
@@ -677,6 +682,8 @@ User_registration_system_autogen/timestamp: \
 	C:/Users/Andrei/Desktop/STB/ErrorBox.ui \
 	C:/Users/Andrei/Desktop/STB/LoginPage.ui \
 	C:/Users/Andrei/Desktop/STB/MainPage.ui \
+	C:/Users/Andrei/Desktop/STB/NotificationLabel.ui \
+	C:/Users/Andrei/Desktop/STB/NotificationPopup.ui \
 	C:/Users/Andrei/Desktop/STB/RegisterPage.ui \
 	C:/Users/Andrei/Desktop/STB/RezultatCautareTraseu.ui \
 	C:/Users/Andrei/Desktop/STB/RezultatePage.ui \

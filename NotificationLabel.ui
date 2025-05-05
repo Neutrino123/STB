@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>NotificationLabel</class>
+ <widget class="QWidget" name="NotificationLabel">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>182</width>
+    <height>104</height>
+   </rect>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+    QWidget {
+        background-color: #5c5c5c;
+        border-radius: 6px;
+        padding: 8px;
+        margin-bottom: 6px;
+    }
+    QLabel {
+        color: white;
+        font-size: 12px;
+        font-weight: bold;
+        padding-left: 20px; /* Adăugăm spațiu pentru text */
+    }
+    QPushButton {
+        background: transparent;
+        border: none;
+        padding: 0;
+        width: 24px;  /* Butonul este mai mare acum */
+        height: 24px; /* Butonul este mai mare acum */
+        position: absolute;
+        top: 6px;  /* Poziționăm butonul &quot;X&quot; în colțul din sus */
+        right: 6px; /* Poziționăm butonul &quot;X&quot; în colțul din dreapta */
+        cursor: pointer;
+    }
+    QPushButton:hover {
+        background-color: rgba(255, 0, 0, 0.5); /* Mai vizibil la hover */
+    }
+   </string>
+  </property>
+  <layout class="QVBoxLayout" name="notificationLayout">
+   <item>
+    <widget class="QPushButton" name="closeButton">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LayoutDirection::RightToLeft</enum>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normalon>:/icons/icons/close.png</normalon>
+      </iconset>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="messageLabel">
+     <property name="styleSheet">
+      <string notr="true">font-size: 12px; color: white; padding-left: 10px; font-weight: bold;</string>
+     </property>
+     <property name="text">
+      <string>Mesaj notificare</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

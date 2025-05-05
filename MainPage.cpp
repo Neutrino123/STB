@@ -4,6 +4,11 @@
 #include "CautaTraseu.h"
 #include "TicketWidget.h"
 #include "AmenziListPage.h"
+#include <QDesktopServices>
+#include <QUrl>
+#include "NotificationPopup.h"
+
+
 
 
 MainPage::MainPage(QWidget *parent) :
@@ -13,6 +18,12 @@ MainPage::MainPage(QWidget *parent) :
     ui->setupUi(this);
     this->welcomeLabel = ui->welcomeLabel;
     this->biletePage = new TicketListPage();
+    if(hasNotification()){
+
+        QPushButton *notificationButton = ui->notificationButton;
+        notificationButton->setIcon(QIcon(":/icons/icons/notification.png"));
+
+    }
 
 }
 
@@ -56,34 +67,34 @@ void MainPage::on_veziAmenziButton_clicked(){
     amenziPage->show();
 }
 
- void MainPage::on_cumparaBiletButton_clicked(){
+//  void MainPage::on_cumparaBiletButton_clicked(){
 
-//     // ServerConnection* server = new ServerConnection();
-//     // server->connectToServer("127.0.0.1", 12345);
-//     // QString response = "";
+// //     // ServerConnection* server = new ServerConnection();
+// //     // server->connectToServer("127.0.0.1", 12345);
+// //     // QString response = "";
 
-//     ServerConnection* server = new ServerConnection();
-//     server->connectToServer("127.0.0.1", 12345);
-//     server->sendData("bilet");
+// //     ServerConnection* server = new ServerConnection();
+// //     server->connectToServer("127.0.0.1", 12345);
+// //     server->sendData("bilet");
 
-//     QString response = server->receiveData();
+// //     QString response = server->receiveData();
 
-//     if(response == "success" && this->ticket == nullptr){
+// //     if(response == "success" && this->ticket == nullptr){
 
-//         qDebug()<<"Serverul a creat si trimis biletul cu succes";
-//         if(this->ticket == nullptr){
-//             qDebug() << "am cumparat bilet";
-//             this->ticket = new TicketWidget();
-//         }
+// //         qDebug()<<"Serverul a creat si trimis biletul cu succes";
+// //         if(this->ticket == nullptr){
+// //             qDebug() << "am cumparat bilet";
+// //             this->ticket = new TicketWidget();
+// //         }
 
-//     }
+// //     }
 
-//     else{
-//         qDebug() << "Deja ai cumparat un bilet";
-//     }
+// //     else{
+// //         qDebug() << "Deja ai cumparat un bilet";
+// //     }
 
 
- }
+//  }
 
 void MainPage::on_veziBiletButton_clicked(){
 
@@ -116,13 +127,39 @@ void MainPage::on_veziBiletButton_clicked(){
     }
 
 }
+void MainPage::on_veziHartaButton_clicked(){
+
+  QDesktopServices::openUrl(QUrl("https://www.google.com/maps"));
+
+}
+
+void MainPage::on_notificationButton_clicked(){
+
+    QPushButton *notificationButton = ui->notificationButton;
+
+    notificationButton->setIcon(QIcon(":/icons/icons/bell.png"));
+    NotificationPopup *popup = new NotificationPopup(this);
+    popup->addNotification("notificarea1");
+    popup->addNotification("notificarea2");
+    popup->addNotification("notificarea3");
+    popup->addNotification("notificarea4");
+
+    if (popup->isVisible()) {
+        popup->hide();
+    } else {
+        QPoint globalPos = notificationButton->mapToGlobal(QPoint(0, notificationButton->height()));
+        popup->move(globalPos.x() - popup->width() + notificationButton->width(), globalPos.y() + 10);
+        popup->show();
+    }
+
+}
 
 void MainPage::on_cautaTraseuButton_clicked(){
 
     this->close();
     CautaTraseu* traseu = new CautaTraseu();
     traseu->setMainPagePointer(this);
-    traseu->setBiletePagePointer(this->biletePage);
+    //traseu->setBiletePagePointer(this->biletePage);
     traseu->show();
 
 }
@@ -133,3 +170,13 @@ void MainPage::setUsername(QString username){
     this->welcomeLabel->setText(welcomeText);
 
 }
+bool MainPage::hasNotification(){
+
+    //Server Connection
+    if(true){
+        return true;
+    }
+    return false;
+
+}
+

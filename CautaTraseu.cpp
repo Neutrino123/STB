@@ -42,7 +42,7 @@ void CautaTraseu::on_cautaTraseuButton_clicked(){
     else {
 
         QStringList coduriList = response.split("|");
-        RezultatePage* ptrRezultatPage = new RezultatePage(this->biletePage);
+        RezultatePage* ptrRezultatPage = new RezultatePage();
 
         for (const QString &cod : coduriList) {
             qDebug() << cod;
@@ -87,11 +87,11 @@ void CautaTraseu::setMainPagePointer(MainPage* ptrMainPagee){
     this->ptrMainPage = ptrMainPagee;
 
 }
-void CautaTraseu::setBiletePagePointer(TicketListPage* ptrBiletePage){
+// void CautaTraseu::setBiletePagePointer(TicketListPage* ptrBiletePage){
 
-    this->biletePage = ptrBiletePage;
+//     this->biletePage = ptrBiletePage;
 
-}
+// }
 
 
 

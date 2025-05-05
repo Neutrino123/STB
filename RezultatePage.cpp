@@ -4,12 +4,12 @@
 #include "RezultatCautareTraseu.h"
 #include "TicketListPage.h"
 
-RezultatePage::RezultatePage(TicketListPage* biletePagePtr, QWidget *parent)
+RezultatePage::RezultatePage(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::RezultatePage)
 {
     ui->setupUi(this);
-    this->biletePage = biletePagePtr;
+    //this->biletePage = biletePagePtr;
     // Obținem layout-ul din scroll area
     layoutRute = qobject_cast<QVBoxLayout*>(ui->scrollAreaWidgetContents->layout());
     if (!layoutRute) {
@@ -25,9 +25,10 @@ RezultatePage::~RezultatePage()
 
 void RezultatePage::adaugaRuta(const QString &codRuta)
 {
-    RezultatCautareTraseu* rezultat = new RezultatCautareTraseu(this->biletePage, codRuta);
+    RezultatCautareTraseu* rezultat = new RezultatCautareTraseu(codRuta);
 
     QVBoxLayout* layout = this->layoutRute;
+
 
     layout->addWidget(rezultat);
 }

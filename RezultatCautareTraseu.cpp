@@ -5,14 +5,14 @@
 #include "TicketListPage.h"
 
 
-RezultatCautareTraseu::RezultatCautareTraseu(TicketListPage* biletePagePtr, QString denumire, QWidget *parent) :
+RezultatCautareTraseu::RezultatCautareTraseu(QString denumire, QWidget *parent) :
     QWidget(parent),
     ui(new Ui::RezultatCautareTraseu)
 {
     ui->setupUi(this);
     QLabel* label = findChild<QLabel*>("traseuLabel");
     label->setText(denumire);
-    this->biletePage = biletePagePtr;
+    //this->biletePage = biletePagePtr;
 }
 
 RezultatCautareTraseu::~RezultatCautareTraseu()
@@ -36,7 +36,7 @@ void RezultatCautareTraseu::on_buyTicketButton_clicked(){
 
         qDebug()<<"Serverul a creat si trimis biletul cu succes";
         TicketWidget* bilet = new TicketWidget();
-        this->biletePage->adaugaBilet(bilet);
+        //this->biletePage->adaugaBilet(bilet);
     }
     // }
 

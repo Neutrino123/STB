@@ -17,7 +17,7 @@ class RezultatCautareTraseu : public QWidget
     Q_OBJECT
 
 public:
-    explicit RezultatCautareTraseu( TicketListPage* biletePagePtr, QString denumire, QWidget *parent = nullptr);
+    explicit RezultatCautareTraseu(QString denumire, QWidget *parent = nullptr);
     ~RezultatCautareTraseu();
 
 
@@ -26,7 +26,7 @@ private slots:
 
 private:
     Ui::RezultatCautareTraseu *ui;
-    TicketListPage* biletePage;
+    //TicketListPage* biletePage;
 
 };
 

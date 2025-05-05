@@ -11,6 +11,7 @@
 
 #include <QtCore/QVariant>
 #include <QtGui/QAction>
+#include <QtGui/QIcon>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QMainWindow>
@@ -26,11 +27,12 @@ class Ui_MainPage
 public:
     QWidget *centralwidget;
     QLabel *welcomeLabel;
-    QPushButton *cumparaBiletButton;
     QPushButton *cautaTraseuButton;
     QPushButton *veziBiletButton;
     QPushButton *veziAmenziButton;
+    QPushButton *veziHartaButton;
     QPushButton *logoutButton;
+    QPushButton *notificationButton;
     QMenuBar *menubar;
     QMenu *menuLogged_in;
 
@@ -56,48 +58,46 @@ public:
         font1.setBold(true);
         welcomeLabel->setFont(font1);
         welcomeLabel->setStyleSheet(QString::fromUtf8("color: #00FF00; font-size: 28px; font-weight: bold; text-shadow: 2px 2px 10px #00FF00;"));
-        cumparaBiletButton = new QPushButton(centralwidget);
-        cumparaBiletButton->setObjectName("cumparaBiletButton");
-        cumparaBiletButton->setGeometry(QRect(240, 100, 120, 40));
+        cautaTraseuButton = new QPushButton(centralwidget);
+        cautaTraseuButton->setObjectName("cautaTraseuButton");
+        cautaTraseuButton->setGeometry(QRect(240, 120, 120, 40));
         QSizePolicy sizePolicy(QSizePolicy::Policy::Expanding, QSizePolicy::Policy::Fixed);
         sizePolicy.setHorizontalStretch(1);
         sizePolicy.setVerticalStretch(0);
-        sizePolicy.setHeightForWidth(cumparaBiletButton->sizePolicy().hasHeightForWidth());
-        cumparaBiletButton->setSizePolicy(sizePolicy);
-        cumparaBiletButton->setStyleSheet(QString::fromUtf8("background-color: #4CAF50; color: white; border-radius: 5px; font-weight: bold; padding: 10px; text-align: center; font-size: 14px; transition: background-color 0.3s ease;"));
-        cautaTraseuButton = new QPushButton(centralwidget);
-        cautaTraseuButton->setObjectName("cautaTraseuButton");
-        cautaTraseuButton->setGeometry(QRect(240, 160, 120, 40));
         sizePolicy.setHeightForWidth(cautaTraseuButton->sizePolicy().hasHeightForWidth());
         cautaTraseuButton->setSizePolicy(sizePolicy);
-        cautaTraseuButton->setStyleSheet(QString::fromUtf8("background-color: #4CAF50; color: white; border-radius: 5px; font-weight: bold; padding: 10px; text-align: center; font-size: 14px; transition: background-color 0.3s ease;"));
+        cautaTraseuButton->setStyleSheet(QString::fromUtf8("background-color: #4CAF50; color: white; border-radius: 5px; font-weight: bold; padding: 10px; text-align: center; font-size: 14px; transition: background-color 0.3s ease; cursor: pointer;"));
         veziBiletButton = new QPushButton(centralwidget);
         veziBiletButton->setObjectName("veziBiletButton");
-        veziBiletButton->setGeometry(QRect(240, 230, 120, 40));
-        sizePolicy.setHeightForWidth(veziBiletButton->sizePolicy().hasHeightForWidth());
-        veziBiletButton->setSizePolicy(sizePolicy);
-        veziBiletButton->setStyleSheet(QString::fromUtf8("background-color: #4CAF50; color: white; border-radius: 5px; font-weight: bold; padding: 10px; text-align: center; font-size: 14px; transition: background-color 0.3s ease;"));
+        veziBiletButton->setGeometry(QRect(240, 180, 120, 40));
+        veziBiletButton->setStyleSheet(QString::fromUtf8("background-color: #4CAF50; color: white; border-radius: 5px; font-weight: bold; padding: 10px; text-align: center; font-size: 14px; transition: background-color 0.3s ease; cursor: pointer;"));
         veziAmenziButton = new QPushButton(centralwidget);
         veziAmenziButton->setObjectName("veziAmenziButton");
-        veziAmenziButton->setGeometry(QRect(240, 290, 120, 40));
-        sizePolicy.setHeightForWidth(veziAmenziButton->sizePolicy().hasHeightForWidth());
-        veziAmenziButton->setSizePolicy(sizePolicy);
-        veziAmenziButton->setStyleSheet(QString::fromUtf8("background-color: #4CAF50; color: white; border-radius: 5px; font-weight: bold; padding: 10px; text-align: center; font-size: 14px; transition: background-color 0.3s ease;"));
+        veziAmenziButton->setGeometry(QRect(240, 240, 120, 40));
+        veziAmenziButton->setStyleSheet(QString::fromUtf8("background-color: #4CAF50; color: white; border-radius: 5px; font-weight: bold; padding: 10px; text-align: center; font-size: 14px; transition: background-color 0.3s ease; cursor: pointer;"));
+        veziHartaButton = new QPushButton(centralwidget);
+        veziHartaButton->setObjectName("veziHartaButton");
+        veziHartaButton->setGeometry(QRect(240, 300, 120, 40));
+        veziHartaButton->setStyleSheet(QString::fromUtf8("background-color: #4CAF50; color: white; border-radius: 5px; font-weight: bold; padding: 10px; text-align: center; font-size: 14px; transition: background-color 0.3s ease; cursor: pointer;"));
         logoutButton = new QPushButton(centralwidget);
         logoutButton->setObjectName("logoutButton");
         logoutButton->setGeometry(QRect(470, 380, 120, 40));
-        sizePolicy.setHeightForWidth(logoutButton->sizePolicy().hasHeightForWidth());
-        logoutButton->setSizePolicy(sizePolicy);
-        logoutButton->setStyleSheet(QString::fromUtf8("background-color: #FF0000; color: white; border-radius: 5px; font-weight: bold; padding: 10px; text-align: center; font-size: 14px; transition: background-color 0.3s ease;"));
+        logoutButton->setStyleSheet(QString::fromUtf8("background-color: #FF0000; color: white; border-radius: 5px; font-weight: bold; padding: 10px; text-align: center; font-size: 14px; transition: background-color 0.3s ease; cursor: pointer;"));
+        notificationButton = new QPushButton(centralwidget);
+        notificationButton->setObjectName("notificationButton");
+        notificationButton->setGeometry(QRect(550, 10, 32, 32));
+        notificationButton->setStyleSheet(QString::fromUtf8("background-color: transparent; border: none;"));
+        QIcon icon;
+        icon.addFile(QString::fromUtf8(":/icons/icons/bell.png"), QSize(), QIcon::Mode::Normal, QIcon::State::Off);
+        icon.addFile(QString::fromUtf8(":/icons/icons/notification.png"), QSize(), QIcon::Mode::Normal, QIcon::State::On);
+        notificationButton->setIcon(icon);
+        notificationButton->setIconSize(QSize(24, 24));
         MainPage->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainPage);
         menubar->setObjectName("menubar");
         menubar->setGeometry(QRect(0, 0, 600, 21));
         menuLogged_in = new QMenu(menubar);
         menuLogged_in->setObjectName("menuLogged_in");
-        QFont font2;
-        font2.setBold(false);
-        menuLogged_in->setFont(font2);
         MainPage->setMenuBar(menubar);
 
         menubar->addAction(menuLogged_in->menuAction());
@@ -111,10 +111,10 @@ public:
     {
         MainPage->setWindowTitle(QCoreApplication::translate("MainPage", "MainWindow", nullptr));
         welcomeLabel->setText(QCoreApplication::translate("MainPage", "Welcome, <username>", nullptr));
-        cumparaBiletButton->setText(QCoreApplication::translate("MainPage", "Cumpara Bilet", nullptr));
         cautaTraseuButton->setText(QCoreApplication::translate("MainPage", "Cauta Traseu", nullptr));
         veziBiletButton->setText(QCoreApplication::translate("MainPage", "Vezi Bilet", nullptr));
         veziAmenziButton->setText(QCoreApplication::translate("MainPage", "Amenzi", nullptr));
+        veziHartaButton->setText(QCoreApplication::translate("MainPage", "Vezi Harta", nullptr));
         logoutButton->setText(QCoreApplication::translate("MainPage", "Logout", nullptr));
         menuLogged_in->setTitle(QCoreApplication::translate("MainPage", "Logged in", nullptr));
     } // retranslateUi

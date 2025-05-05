@@ -5,6 +5,8 @@
 #include "EWIEGA46WW/moc_ControlorPage.cpp"
 #include "EWIEGA46WW/moc_ErrorBox.cpp"
 #include "EWIEGA46WW/moc_LoginPage.cpp"
+#include "EWIEGA46WW/moc_NotificationLabel.cpp"
+#include "EWIEGA46WW/moc_NotificationPopup.cpp"
 #include "EWIEGA46WW/moc_OferaAmenda.cpp"
 #include "EWIEGA46WW/moc_RegisterPage.cpp"
 #include "EWIEGA46WW/moc_RezultatCautareTraseu.cpp"

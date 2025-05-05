@@ -18,7 +18,7 @@ class RezultatePage : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit RezultatePage(TicketListPage* biletePagePtr, QWidget *parent = nullptr);
+    explicit RezultatePage(QWidget *parent = nullptr);
     ~RezultatePage();
 
     void adaugaRuta(const QString &codRuta);

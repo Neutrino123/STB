@@ -12,3 +12,10 @@ AmendaWidget::~AmendaWidget()
 {
     delete ui;
 }
+
+void AmendaWidget::on_platesteButton_clicked()
+{
+    this->deleteLater();  // Șterge widgetul în siguranță
+
+    //Conexiune cu serverul;
+}

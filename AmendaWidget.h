@@ -15,6 +15,9 @@ public:
     explicit AmendaWidget(QWidget *parent = nullptr);
     ~AmendaWidget();
 
+private slots:
+    void on_platesteButton_clicked();
+
 private:
     Ui::AmendaWidget *ui;
 };

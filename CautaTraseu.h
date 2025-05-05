@@ -17,7 +17,7 @@ public:
     CautaTraseu(QWidget *parent = nullptr);
     ~CautaTraseu();
     void setMainPagePointer(MainPage* ptrMainPage);
-    void setBiletePagePointer(TicketListPage* ptrBiletePage);
+    //void setBiletePagePointer(TicketListPage* ptrBiletePage);
 
 
 
@@ -29,7 +29,7 @@ private slots:
 private:
     Ui::CautaTraseu *ui;
     MainPage* ptrMainPage;
-    TicketListPage* biletePage;
+    //TicketListPage* biletePage;
 };
 
 #endif // CAUTATRASEU_H
