@@ -1,4 +1,8 @@
 #include "ServerConnection.h"
+#include <QFile>
+#include <QTextStream>
+#include <QString>
+#include <QDebug>
 
 ServerConnection::ServerConnection()
 {
@@ -45,4 +49,31 @@ QString ServerConnection::receiveData()
         }
     }
     return QString();
+}
+
+void ServerConnection::readFromFile(QString pathServer){
+    QFile file(pathServer);
+    if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        qDebug() << "Nu pot deschide fisierul:" << pathServer;
+        return;
+    }
+    QTextStream in(&file);
+    QString line = in.readLine().trimmed();
+    file.close();
+    QStringList parts = line.split(" ", Qt::SkipEmptyParts);
+    if (parts.size() == 2) {
+        ip = parts[0];
+        port = parts[1].toUShort();
+    }
+
+    qDebug() << "Format invalid. Se asteapta: IP PORT";
+    return;
+}
+
+QString ServerConnection::getIp(){
+    return this->ip;
+}
+
+quint16 ServerConnection::getPort(){
+    return this->port;
 }

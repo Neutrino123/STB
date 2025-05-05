@@ -10,7 +10,7 @@ class TicketWidget : public QWidget
     Q_OBJECT
 
 public:
-    explicit TicketWidget(QWidget *parent = nullptr);
+    explicit TicketWidget(QString purchaseDate, QString expireDate, QString biletId, QString busId, QWidget *parent = nullptr);
     ~TicketWidget();
 
 private:

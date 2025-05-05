@@ -38,7 +38,7 @@ struct qt_meta_tag_ZN12RegisterPageE_t {};
 #ifdef QT_MOC_HAS_STRINGDATA
 static constexpr auto qt_meta_stringdata_ZN12RegisterPageE = QtMocHelpers::stringData(
     "RegisterPage",
-    "on_pushButton_clicked",
+    "on_submitButton_clicked",
     ""
 );
 #else  // !QT_MOC_HAS_STRINGDATA
@@ -76,7 +76,7 @@ Q_CONSTINIT const QMetaObject RegisterPage::staticMetaObject = { {
     qt_incomplete_metaTypeArray<qt_meta_tag_ZN12RegisterPageE_t,
         // Q_OBJECT / Q_GADGET
         QtPrivate::TypeAndForceComplete<RegisterPage, std::true_type>,
-        // method 'on_pushButton_clicked'
+        // method 'on_submitButton_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
@@ -87,7 +87,7 @@ void RegisterPage::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id
     auto *_t = static_cast<RegisterPage *>(_o);
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
-        case 0: _t->on_pushButton_clicked(); break;
+        case 0: _t->on_submitButton_clicked(); break;
         default: ;
         }
     }

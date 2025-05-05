@@ -6,7 +6,7 @@ ErrorBox::ErrorBox(QWidget *parent) :
     ui(new Ui::ErrorBox)
 {
     ui->setupUi(this);
-    this->setWindowModality(Qt::ApplicationModal); // fereastra e modală
+    this->setWindowModality(Qt::ApplicationModal);
 }
 
 ErrorBox::~ErrorBox()
@@ -17,4 +17,12 @@ ErrorBox::~ErrorBox()
 void ErrorBox::on_buttonClose_clicked()
 {
     this->accept(); // închide dialogul, echivalent cu close() dar specific QDialog
+}
+
+void ErrorBox::setMessage(QString message){
+
+    QLabel* label = ui->labelError;
+    label->setText(message);
+    label->setAlignment(Qt::AlignHCenter);
+
 }

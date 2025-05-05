@@ -76,7 +76,7 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 91,
+				"line" : 92,
 				"parent" : 0
 			},
 			{
@@ -427,7 +427,8 @@
 				51,
 				55,
 				58,
-				77
+				78,
+				79
 			]
 		}
 	],
@@ -570,7 +571,8 @@
 				51,
 				55,
 				58,
-				77
+				78,
+				79
 			]
 		},
 		{
@@ -597,7 +599,6 @@
 				50,
 				54,
 				57,
-				59,
 				60,
 				61,
 				62,
@@ -613,7 +614,8 @@
 				72,
 				73,
 				74,
-				75
+				75,
+				76
 			]
 		},
 		{
@@ -643,22 +645,24 @@
 			"name" : "Resources",
 			"sourceIndexes" : 
 			[
-				52
+				52,
+				59
 			]
 		},
 		{
 			"name" : "",
 			"sourceIndexes" : 
 			[
-				76
+				77
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				78,
-				79
+				80,
+				81,
+				82
 			]
 		}
 	],
@@ -982,6 +986,11 @@
 			"sourceGroupIndex" : 0
 		},
 		{
+			"backtrace" : 4,
+			"path" : "fisiere_text.qrc",
+			"sourceGroupIndex" : 3
+		},
+		{
 			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/User_registration_system_autogen/include/ui_LoginPage.h",
@@ -1098,6 +1107,13 @@
 		},
 		{
 			"backtrace" : 0,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/User_registration_system_autogen/EWIEGA46WW/qrc_fisiere_text.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/User_registration_system_autogen/timestamp.rule",
 			"sourceGroupIndex" : 5
@@ -1106,6 +1122,12 @@
 			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/User_registration_system_autogen/EWIEGA46WW/qrc_icons.cpp.rule",
+			"sourceGroupIndex" : 5
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/User_registration_system_autogen/EWIEGA46WW/qrc_fisiere_text.cpp.rule",
 			"sourceGroupIndex" : 5
 		}
 	],

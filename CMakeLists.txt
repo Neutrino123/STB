@@ -67,6 +67,7 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         NotificationPopup.h NotificationPopup.cpp
         NotificationLabel.ui
         NotificationLabel.h NotificationLabel.cpp
+        fisiere_text.qrc
 
 
 

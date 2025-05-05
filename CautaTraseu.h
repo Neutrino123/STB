@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "MainPage.h"
+#include "ErrorBox.h"
 
 
 QT_BEGIN_NAMESPACE
@@ -17,9 +18,6 @@ public:
     CautaTraseu(QWidget *parent = nullptr);
     ~CautaTraseu();
     void setMainPagePointer(MainPage* ptrMainPage);
-    //void setBiletePagePointer(TicketListPage* ptrBiletePage);
-
-
 
 private slots:
 
@@ -29,7 +27,7 @@ private slots:
 private:
     Ui::CautaTraseu *ui;
     MainPage* ptrMainPage;
-    //TicketListPage* biletePage;
+    ErrorBox* error;
 };
 
 #endif // CAUTATRASEU_H

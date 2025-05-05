@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include "DatabaseHeader.h"
+#include "SuccessBox.h"
 
 namespace Ui {
 class RegisterPage;
@@ -17,10 +18,12 @@ public:
     ~RegisterPage();
 
 private slots:
-    void on_pushButton_clicked();
+    void on_submitButton_clicked();
 
 private:
     Ui::RegisterPage *ui;
+    SuccessBox* success;
+
 };
 
 #endif // REGISTERPAGE_H

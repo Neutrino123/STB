@@ -2,11 +2,19 @@
 #include <QDateTime>
 #include <ServerConnection.h>
 
-TicketWidget::TicketWidget(QWidget *parent) :
+TicketWidget::TicketWidget(QString purchaseDate, QString expirationDate, QString biletId, QString busId, QWidget *parent) :
     QWidget(parent),
     ui(new Ui::TicketWidget)
 {
     ui->setupUi(this);
+    this->setFixedSize(193, 167);
+
+    ui->purchaseDateLabel->setText("Purchase Date: " + purchaseDate);
+    ui->expirationDateLabel->setText("Expiration Date: " + expirationDate);
+    ui->validityLabel->setText("Valid for 1 hour");
+    ui->ticketIdLabel->setText("Id bilet: " + biletId);
+    ui->titleLabel->setText("BILET");
+    ui->busIdLabel->setText("Id Vehicul: " + busId);
 
     // // Obține data curentă
     // QString currentTime = QDateTime::currentDateTime().toString("yyyy-MM-dd HH:mm:ss");

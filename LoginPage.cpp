@@ -14,6 +14,7 @@ LoginPage::LoginPage(QWidget *parent)
     this->ptrRegisterPage = new RegisterPage();
     this->errorBox = new ErrorBox();
     this->successBox = new SuccessBox();
+    this->setFixedSize(800, 500);
 }
 
 LoginPage::~LoginPage()
@@ -32,22 +33,25 @@ void LoginPage::on_loginButton_clicked()
 {
     qDebug() << "butonul de login merge \n";
 
-    // ServerConnection* server = new ServerConnection();
-    // server->connectToServer("127.0.0.1", 12345); //172.16.42.12", 1028
-     QString email = ui->emailInput->text().trimmed();
-     QString password = ui->passwordInput->text().trimmed();
-    // QString buffer = "login|" + email + "|" + password + "|";
-    // buffer += '\0';
+    ServerConnection* server = new ServerConnection();
+    server->readFromFile(":serverText/server.txt");
+    server->connectToServer(server->getIp(), server->getPort());
 
-    // server->sendData(buffer);
+    qDebug()<<server->getIp();
+    qDebug()<<server->getPort();
 
-    // QString response = server->receiveData();
-   // qDebug()<<response;
+    QString email = ui->emailInput->text().trimmed();
+    QString password = ui->passwordInput->text().trimmed();
+    QString buffer = "login|" + email + "|" + password + "|";
+    buffer += '\0';
 
-    QString response;
-    response = "success";
+    server->sendData(buffer);
+
+    QString response = server->receiveData();
+    qDebug()<<response;
+
     if(response == "success"){
-
+        this->successBox->setMessage("V-ați conectat cu succes!");
         this->successBox->show();
         this->ptrMainPage = new MainPage();
         this->ptrMainPage->setUsername(email);
@@ -57,6 +61,7 @@ void LoginPage::on_loginButton_clicked()
     }
     else if (response == "successControlor"){
 
+        this->successBox->setMessage("V-ați conectat cu succes!");
         this->successBox->show();
         this->ptrControlorPage = new ControlorPage();
         this->ptrControlorPage->setUsername(email);
@@ -64,6 +69,10 @@ void LoginPage::on_loginButton_clicked()
         this->close();
 
     }
-   // delete server;
+    else if(response == "failed"){
+        this->errorBox->setMessage("Email sau parola incorectă!");
+        this->errorBox->show();
+    }
+    delete server;
 }
 

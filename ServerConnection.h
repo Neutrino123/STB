@@ -12,7 +12,12 @@ public:
     void disconnectFromServer();
     bool sendData(const QString &data);
     QString receiveData();
+    void readFromFile(QString serverName);
+    QString getIp();
+    quint16 getPort();
 
 private:
     QTcpSocket *socket;
+    QString ip;
+    quint16 port;
 };

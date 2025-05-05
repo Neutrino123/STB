@@ -14,6 +14,7 @@ class ErrorBox : public QDialog
 public:
     explicit ErrorBox(QWidget *parent = nullptr);
     ~ErrorBox();
+    void setMessage(QString message);
 
 private slots:
     void on_buttonClose_clicked();

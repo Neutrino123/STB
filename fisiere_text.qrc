@@ -1,0 +1,6 @@
+<RCC>
+ <qresource prefix="">
+  <file>serverText/server.txt</file>
+
+ </qresource>
+</RCC>

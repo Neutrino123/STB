@@ -3,6 +3,8 @@
 #include "ServerConnection.h"
 #include "TicketWidget.h"
 #include "TicketListPage.h"
+#include "SuccessBox.h"
+#include "ErrorBox.h"
 
 
 RezultatCautareTraseu::RezultatCautareTraseu(QString denumire, QWidget *parent) :
@@ -12,7 +14,7 @@ RezultatCautareTraseu::RezultatCautareTraseu(QString denumire, QWidget *parent) 
     ui->setupUi(this);
     QLabel* label = findChild<QLabel*>("traseuLabel");
     label->setText(denumire);
-    //this->biletePage = biletePagePtr;
+
 }
 
 RezultatCautareTraseu::~RezultatCautareTraseu()
@@ -20,14 +22,14 @@ RezultatCautareTraseu::~RezultatCautareTraseu()
     delete ui;
 }
 
-
 void RezultatCautareTraseu::on_buyTicketButton_clicked(){
 
-    qDebug()<<"Ai cumparat bilet pentru "<<ui->traseuLabel->text();
-    ui->buyTicketButton->setText("Cumparat!");
+   // qDebug()<<"Ai cumparat bilet pentru "<<ui->traseuLabel->text();
 
     ServerConnection* server = new ServerConnection();
-    server->connectToServer("127.0.0.1", 12345);
+    server->readFromFile(":serverText/server.txt");
+    server->connectToServer(server->getIp(), server->getPort());
+
     server->sendData("bilet|");
 
     QString response = server->receiveData();
@@ -35,13 +37,17 @@ void RezultatCautareTraseu::on_buyTicketButton_clicked(){
     if(response == "success"){
 
         qDebug()<<"Serverul a creat si trimis biletul cu succes";
-        TicketWidget* bilet = new TicketWidget();
-        //this->biletePage->adaugaBilet(bilet);
-    }
-    // }
+        SuccessBox* success = new SuccessBox();
+        success->setMessage("Ai cumpărat biletul!");
+        success->show();
 
-    // else{
-    //     qDebug() << "Deja ai cumparat un bilet";
-    // }
+    }
+
+    else{
+        ErrorBox* error = new ErrorBox();
+        error->setMessage("Eroare!");
+        error->show();
+    }
+    delete server;
 
 }

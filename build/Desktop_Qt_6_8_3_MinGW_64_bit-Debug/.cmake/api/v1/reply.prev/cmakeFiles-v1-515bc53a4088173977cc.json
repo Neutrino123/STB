@@ -1462,6 +1462,9 @@
 		},
 		{
 			"path" : "icons.qrc"
+		},
+		{
+			"path" : "fisiere_text.qrc"
 		}
 	],
 	"kind" : "cmakeFiles",

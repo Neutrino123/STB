@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>600</width>
-    <height>450</height>
+    <width>800</width>
+    <height>600</height>
    </rect>
   </property>
   <property name="font">
@@ -15,11 +15,10 @@
     <family>Arial</family>
     <pointsize>12</pointsize>
     <bold>true</bold>
-    <underline>false</underline>
    </font>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Controlor</string>
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: #121212; color: white;</string>
@@ -28,21 +27,14 @@
    <widget class="QLabel" name="welcomeLabel">
     <property name="geometry">
      <rect>
-      <x>120</x>
-      <y>10</y>
-      <width>361</width>
-      <height>41</height>
+      <x>90</x>
+      <y>20</y>
+      <width>620</width>
+      <height>50</height>
      </rect>
     </property>
-    <property name="font">
-     <font>
-      <family>Arial</family>
-      <pointsize>-1</pointsize>
-      <bold>true</bold>
-     </font>
-    </property>
     <property name="styleSheet">
-     <string notr="true">color: #00FF00; font-size: 28px; font-weight: bold; text-shadow: 2px 2px 10px #00FF00;</string>
+     <string notr="true">color: #00FF00; font-size: 28px; font-weight: bold;</string>
     </property>
     <property name="text">
      <string>Welcome, &lt;username&gt;</string>
@@ -51,67 +43,105 @@
    <widget class="QPushButton" name="verificaBiletButton">
     <property name="geometry">
      <rect>
-      <x>240</x>
-      <y>110</y>
-      <width>120</width>
-      <height>40</height>
+      <x>280</x>
+      <y>175</y>
+      <width>200</width>
+      <height>60</height>
      </rect>
     </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-      <horstretch>1</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
     <property name="styleSheet">
-     <string notr="true">background-color: #4CAF50; color: white; border-radius: 5px; font-weight: bold; padding: 10px; text-align: center; font-size: 14px; transition: background-color 0.3s ease;</string>
+     <string notr="true">background-color: #4CAF50; color: white; border-radius: 8px; font-weight: bold; font-size: 16px; padding: 10px;</string>
     </property>
     <property name="text">
-     <string>Verifica Bilet</string>
+     <string>Verifică Bilet</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="ticketIcon">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>180</y>
+      <width>48</width>
+      <height>48</height>
+     </rect>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="icons.qrc">:/icons/icons/ticket.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
     </property>
    </widget>
    <widget class="QPushButton" name="oferaAmendaButton">
     <property name="geometry">
      <rect>
-      <x>240</x>
-      <y>170</y>
-      <width>120</width>
-      <height>40</height>
+      <x>280</x>
+      <y>325</y>
+      <width>200</width>
+      <height>60</height>
      </rect>
     </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-      <horstretch>1</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
     <property name="styleSheet">
-     <string notr="true">background-color: #4CAF50; color: white; border-radius: 5px; font-weight: bold; padding: 10px; text-align: center; font-size: 14px; transition: background-color 0.3s ease;</string>
+     <string notr="true">background-color: #4CAF50; color: white; border-radius: 8px; font-weight: bold; font-size: 16px; padding: 10px;</string>
     </property>
     <property name="text">
-     <string>Ofera Amenda</string>
+     <string>Oferă Amendă</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="fineIcon">
+    <property name="geometry">
+     <rect>
+      <x>490</x>
+      <y>330</y>
+      <width>48</width>
+      <height>48</height>
+     </rect>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="icons.qrc">:/icons/icons/administrative-fine.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
     </property>
    </widget>
    <widget class="QPushButton" name="logoutButton">
     <property name="geometry">
      <rect>
-      <x>470</x>
-      <y>380</y>
+      <x>600</x>
+      <y>500</y>
       <width>120</width>
       <height>40</height>
      </rect>
     </property>
-    <property name="sizePolicy">
-     <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-      <horstretch>1</horstretch>
-      <verstretch>0</verstretch>
-     </sizepolicy>
-    </property>
     <property name="styleSheet">
-     <string notr="true">background-color: #FF0000; color: white; border-radius: 5px; font-weight: bold; padding: 10px; text-align: center; font-size: 14px; transition: background-color 0.3s ease;</string>
+     <string notr="true">background-color: #FF4444; color: white; border-radius: 6px; font-weight: bold; font-size: 14px;</string>
     </property>
     <property name="text">
      <string>Logout</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="notificationButton">
+    <property name="geometry">
+     <rect>
+      <x>730</x>
+      <y>20</y>
+      <width>32</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: transparent; border: none;</string>
+    </property>
+    <property name="icon">
+     <iconset resource="icons.qrc">
+      <normaloff>:/icons/icons/bell.png</normaloff>
+      <normalon>:/icons/icons/notification.png</normalon>:/icons/icons/bell.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>24</width>
+      <height>24</height>
+     </size>
     </property>
    </widget>
   </widget>
@@ -120,16 +150,11 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>600</width>
+     <width>800</width>
      <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuLogged_in">
-    <property name="font">
-     <font>
-      <bold>false</bold>
-     </font>
-    </property>
     <property name="title">
      <string>Logged in</string>
     </property>
@@ -137,6 +162,8 @@
    <addaction name="menuLogged_in"/>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="icons.qrc"/>
+ </resources>
  <connections/>
 </ui>

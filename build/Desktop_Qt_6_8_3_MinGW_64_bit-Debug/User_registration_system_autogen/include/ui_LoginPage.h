@@ -39,6 +39,7 @@ public:
     QPushButton *loginButton;
     QLabel *label_4;
     QPushButton *registerButton;
+    QLabel *mainTitle;
     QMenuBar *menubar;
     QMenu *menuUser_Login_Page;
     QStatusBar *statusbar;
@@ -58,7 +59,7 @@ public:
         centralwidget->setObjectName("centralwidget");
         loginframe = new QFrame(centralwidget);
         loginframe->setObjectName("loginframe");
-        loginframe->setGeometry(QRect(200, 80, 400, 340));
+        loginframe->setGeometry(QRect(210, 80, 400, 360));
         loginframe->setStyleSheet(QString::fromUtf8("\n"
 "QFrame#loginframe {\n"
 "    background-color: #1F1F1F;\n"
@@ -96,7 +97,7 @@ public:
         passwordInput = new QLineEdit(loginframe);
         passwordInput->setObjectName("passwordInput");
         passwordInput->setStyleSheet(QString::fromUtf8("background-color: #2A2A2A; border: 1px solid #555; border-radius: 8px; padding: 6px; color: white;"));
-        passwordInput->setEchoMode(QLineEdit::Password);
+        passwordInput->setEchoMode(QLineEdit::EchoMode::Password);
 
         verticalLayout->addWidget(passwordInput);
 
@@ -156,6 +157,10 @@ public:
 
         verticalLayout->addWidget(registerButton);
 
+        mainTitle = new QLabel(centralwidget);
+        mainTitle->setObjectName("mainTitle");
+        mainTitle->setGeometry(QRect(240, 20, 338, 32));
+        mainTitle->setStyleSheet(QString::fromUtf8("color: #00FF00; font-size: 24px; font-weight: bold; qproperty-alignment: AlignCenter;"));
         LoginPage->setCentralWidget(centralwidget);
         menubar = new QMenuBar(LoginPage);
         menubar->setObjectName("menubar");
@@ -176,13 +181,14 @@ public:
 
     void retranslateUi(QMainWindow *LoginPage)
     {
-        LoginPage->setWindowTitle(QCoreApplication::translate("LoginPage", "User Login", nullptr));
+        LoginPage->setWindowTitle(QCoreApplication::translate("LoginPage", "Digital Transport Bucure\310\231ti", nullptr));
         label_3->setText(QCoreApplication::translate("LoginPage", "Use Email and Password for Login", nullptr));
         label->setText(QCoreApplication::translate("LoginPage", "Email:", nullptr));
         label_2->setText(QCoreApplication::translate("LoginPage", "Password:", nullptr));
         loginButton->setText(QCoreApplication::translate("LoginPage", "Login", nullptr));
         label_4->setText(QCoreApplication::translate("LoginPage", "New User?", nullptr));
         registerButton->setText(QCoreApplication::translate("LoginPage", "Register", nullptr));
+        mainTitle->setText(QCoreApplication::translate("LoginPage", "Digital Transport Bucure\310\231ti", nullptr));
         menuUser_Login_Page->setTitle(QCoreApplication::translate("LoginPage", "User Login Page", nullptr));
     } // retranslateUi
 

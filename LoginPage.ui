@@ -18,7 +18,7 @@
    </font>
   </property>
   <property name="windowTitle">
-   <string>User Login</string>
+   <string>Digital Transport București</string>
   </property>
   <property name="styleSheet">
    <string notr="true">background-color: #121212; color: white;</string>
@@ -27,10 +27,10 @@
    <widget class="QFrame" name="loginframe">
     <property name="geometry">
      <rect>
-      <x>200</x>
+      <x>210</x>
       <y>80</y>
       <width>400</width>
-      <height>340</height>
+      <height>360</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -87,7 +87,7 @@ QFrame#loginframe {
         <string notr="true">background-color: #2A2A2A; border: 1px solid #555; border-radius: 8px; padding: 6px; color: white;</string>
        </property>
        <property name="echoMode">
-        <enum>QLineEdit::Password</enum>
+        <enum>QLineEdit::EchoMode::Password</enum>
        </property>
       </widget>
      </item>
@@ -160,6 +160,22 @@ QPushButton:pressed {
       </widget>
      </item>
     </layout>
+   </widget>
+   <widget class="QLabel" name="mainTitle">
+    <property name="geometry">
+     <rect>
+      <x>240</x>
+      <y>20</y>
+      <width>338</width>
+      <height>32</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: #00FF00; font-size: 24px; font-weight: bold; qproperty-alignment: AlignCenter;</string>
+    </property>
+    <property name="text">
+     <string>Digital Transport București</string>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">

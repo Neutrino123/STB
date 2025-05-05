@@ -16,22 +16,22 @@
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QPushButton>
-#include <QtWidgets/QWidget>
+#include <QtWidgets/QVBoxLayout>
 
 QT_BEGIN_NAMESPACE
 
 class Ui_RegisterPage
 {
 public:
-    QWidget *formLayoutWidget;
+    QVBoxLayout *verticalLayout;
     QFormLayout *formLayout;
-    QLabel *label;
+    QLabel *label_username;
     QLineEdit *txtUserName;
-    QLabel *label_2;
+    QLabel *label_email;
     QLineEdit *txtEmail;
-    QLabel *label_3;
+    QLabel *label_password;
     QLineEdit *txtPassword;
-    QLabel *label_4;
+    QLabel *label_conf_password;
     QLineEdit *txtConfPassword;
     QLabel *label_nume;
     QLineEdit *txtNume;
@@ -39,199 +39,129 @@ public:
     QLineEdit *txtPrenume;
     QLabel *label_cnp;
     QLineEdit *txtCNP;
-    QPushButton *pushButton;
+    QPushButton *submitButton;
 
     void setupUi(QDialog *RegisterPage)
     {
         if (RegisterPage->objectName().isEmpty())
             RegisterPage->setObjectName("RegisterPage");
-        RegisterPage->resize(400, 400);
-        RegisterPage->setMaximumSize(QSize(400, 400));
-        RegisterPage->setStyleSheet(QString::fromUtf8("QWidget\n"
-"{\n"
-"    background-color: #121212;\n"
-"    color: #E0E0E0;\n"
-"    border-radius: 10px;\n"
-"}"));
-        formLayoutWidget = new QWidget(RegisterPage);
-        formLayoutWidget->setObjectName("formLayoutWidget");
-        formLayoutWidget->setGeometry(QRect(10, 20, 361, 300));
-        formLayout = new QFormLayout(formLayoutWidget);
+        RegisterPage->resize(400, 450);
+        RegisterPage->setStyleSheet(QString::fromUtf8("\n"
+"    QWidget {\n"
+"        background-color: #121212;\n"
+"        color: white;\n"
+"        font-family: Arial;\n"
+"        font-size: 12pt;\n"
+"    }\n"
+"    QLineEdit {\n"
+"        background-color: #1E1E1E;\n"
+"        color: white;\n"
+"        border: 1px solid #333;\n"
+"        border-radius: 6px;\n"
+"        padding: 5px;\n"
+"    }\n"
+"    QLabel {\n"
+"        font-weight: bold;\n"
+"    }\n"
+"    QPushButton {\n"
+"        background-color: #4CAF50;\n"
+"        color: white;\n"
+"        border-radius: 8px;\n"
+"        font-weight: bold;\n"
+"        font-size: 14px;\n"
+"        padding: 8px;\n"
+"    }\n"
+"    QPushButton:hover {\n"
+"        background-color: #45A049;\n"
+"    }\n"
+"    QPushButton:pressed {\n"
+"        background-color: #388E3C;\n"
+"    }\n"
+"   "));
+        verticalLayout = new QVBoxLayout(RegisterPage);
+        verticalLayout->setObjectName("verticalLayout");
+        formLayout = new QFormLayout();
         formLayout->setObjectName("formLayout");
-        formLayout->setContentsMargins(0, 0, 0, 0);
-        label = new QLabel(formLayoutWidget);
-        label->setObjectName("label");
-        label->setStyleSheet(QString::fromUtf8("QLabel {\n"
-"           font-size: 14px;\n"
-"           font-weight: bold;\n"
-"           color: white;\n"
-"       }"));
+        label_username = new QLabel(RegisterPage);
+        label_username->setObjectName("label_username");
 
-        formLayout->setWidget(0, QFormLayout::LabelRole, label);
+        formLayout->setWidget(0, QFormLayout::LabelRole, label_username);
 
-        txtUserName = new QLineEdit(formLayoutWidget);
+        txtUserName = new QLineEdit(RegisterPage);
         txtUserName->setObjectName("txtUserName");
-        txtUserName->setStyleSheet(QString::fromUtf8("QLineEdit {\n"
-"           background-color: #1E1E1E;\n"
-"           border: 1px solid #333333;\n"
-"           border-radius: 8px;\n"
-"           color: #FFFFFF;\n"
-"           padding: 6px;\n"
-"       }"));
 
         formLayout->setWidget(0, QFormLayout::FieldRole, txtUserName);
 
-        label_2 = new QLabel(formLayoutWidget);
-        label_2->setObjectName("label_2");
-        label_2->setStyleSheet(QString::fromUtf8("QLabel {\n"
-"           font-size: 14px;\n"
-"           font-weight: bold;\n"
-"           color: white;\n"
-"       }"));
+        label_email = new QLabel(RegisterPage);
+        label_email->setObjectName("label_email");
 
-        formLayout->setWidget(1, QFormLayout::LabelRole, label_2);
+        formLayout->setWidget(1, QFormLayout::LabelRole, label_email);
 
-        txtEmail = new QLineEdit(formLayoutWidget);
+        txtEmail = new QLineEdit(RegisterPage);
         txtEmail->setObjectName("txtEmail");
-        txtEmail->setStyleSheet(QString::fromUtf8("QLineEdit {\n"
-"           background-color: #1E1E1E;\n"
-"           border: 1px solid #333333;\n"
-"           border-radius: 8px;\n"
-"           color: #FFFFFF;\n"
-"           padding: 6px;\n"
-"       }"));
 
         formLayout->setWidget(1, QFormLayout::FieldRole, txtEmail);
 
-        label_3 = new QLabel(formLayoutWidget);
-        label_3->setObjectName("label_3");
-        label_3->setStyleSheet(QString::fromUtf8("QLabel {\n"
-"           font-size: 14px;\n"
-"           font-weight: bold;\n"
-"           color: white;\n"
-"       }"));
+        label_password = new QLabel(RegisterPage);
+        label_password->setObjectName("label_password");
 
-        formLayout->setWidget(2, QFormLayout::LabelRole, label_3);
+        formLayout->setWidget(2, QFormLayout::LabelRole, label_password);
 
-        txtPassword = new QLineEdit(formLayoutWidget);
+        txtPassword = new QLineEdit(RegisterPage);
         txtPassword->setObjectName("txtPassword");
-        txtPassword->setStyleSheet(QString::fromUtf8("QLineEdit {\n"
-"           background-color: #1E1E1E;\n"
-"           border: 1px solid #333333;\n"
-"           border-radius: 8px;\n"
-"           color: #FFFFFF;\n"
-"           padding: 6px;\n"
-"       }"));
-        txtPassword->setEchoMode(QLineEdit::EchoMode::Password);
+        txtPassword->setEchoMode(QLineEdit::Password);
 
         formLayout->setWidget(2, QFormLayout::FieldRole, txtPassword);
 
-        label_4 = new QLabel(formLayoutWidget);
-        label_4->setObjectName("label_4");
-        label_4->setStyleSheet(QString::fromUtf8("QLabel {\n"
-"           font-size: 14px;\n"
-"           font-weight: bold;\n"
-"           color: white;\n"
-"       }"));
+        label_conf_password = new QLabel(RegisterPage);
+        label_conf_password->setObjectName("label_conf_password");
 
-        formLayout->setWidget(3, QFormLayout::LabelRole, label_4);
+        formLayout->setWidget(3, QFormLayout::LabelRole, label_conf_password);
 
-        txtConfPassword = new QLineEdit(formLayoutWidget);
+        txtConfPassword = new QLineEdit(RegisterPage);
         txtConfPassword->setObjectName("txtConfPassword");
-        txtConfPassword->setStyleSheet(QString::fromUtf8("QLineEdit {\n"
-"           background-color: #1E1E1E;\n"
-"           border: 1px solid #333333;\n"
-"           border-radius: 8px;\n"
-"           color: #FFFFFF;\n"
-"           padding: 6px;\n"
-"       }"));
-        txtConfPassword->setEchoMode(QLineEdit::EchoMode::Password);
+        txtConfPassword->setEchoMode(QLineEdit::Password);
 
         formLayout->setWidget(3, QFormLayout::FieldRole, txtConfPassword);
 
-        label_nume = new QLabel(formLayoutWidget);
+        label_nume = new QLabel(RegisterPage);
         label_nume->setObjectName("label_nume");
-        label_nume->setStyleSheet(QString::fromUtf8("QLabel {\n"
-"           font-size: 14px;\n"
-"           font-weight: bold;\n"
-"           color: white;\n"
-"       }"));
 
         formLayout->setWidget(4, QFormLayout::LabelRole, label_nume);
 
-        txtNume = new QLineEdit(formLayoutWidget);
+        txtNume = new QLineEdit(RegisterPage);
         txtNume->setObjectName("txtNume");
-        txtNume->setStyleSheet(QString::fromUtf8("QLineEdit {\n"
-"           background-color: #1E1E1E;\n"
-"           border: 1px solid #333333;\n"
-"           border-radius: 8px;\n"
-"           color: #FFFFFF;\n"
-"           padding: 6px;\n"
-"       }"));
 
         formLayout->setWidget(4, QFormLayout::FieldRole, txtNume);
 
-        label_prenume = new QLabel(formLayoutWidget);
+        label_prenume = new QLabel(RegisterPage);
         label_prenume->setObjectName("label_prenume");
-        label_prenume->setStyleSheet(QString::fromUtf8("QLabel {\n"
-"           font-size: 14px;\n"
-"           font-weight: bold;\n"
-"           color: white;\n"
-"       }"));
 
         formLayout->setWidget(5, QFormLayout::LabelRole, label_prenume);
 
-        txtPrenume = new QLineEdit(formLayoutWidget);
+        txtPrenume = new QLineEdit(RegisterPage);
         txtPrenume->setObjectName("txtPrenume");
-        txtPrenume->setStyleSheet(QString::fromUtf8("QLineEdit {\n"
-"           background-color: #1E1E1E;\n"
-"           border: 1px solid #333333;\n"
-"           border-radius: 8px;\n"
-"           color: #FFFFFF;\n"
-"           padding: 6px;\n"
-"       }"));
 
         formLayout->setWidget(5, QFormLayout::FieldRole, txtPrenume);
 
-        label_cnp = new QLabel(formLayoutWidget);
+        label_cnp = new QLabel(RegisterPage);
         label_cnp->setObjectName("label_cnp");
-        label_cnp->setStyleSheet(QString::fromUtf8("QLabel {\n"
-"           font-size: 14px;\n"
-"           font-weight: bold;\n"
-"           color: white;\n"
-"       }"));
 
         formLayout->setWidget(6, QFormLayout::LabelRole, label_cnp);
 
-        txtCNP = new QLineEdit(formLayoutWidget);
+        txtCNP = new QLineEdit(RegisterPage);
         txtCNP->setObjectName("txtCNP");
-        txtCNP->setStyleSheet(QString::fromUtf8("QLineEdit {\n"
-"           background-color: #1E1E1E;\n"
-"           border: 1px solid #333333;\n"
-"           border-radius: 8px;\n"
-"           color: #FFFFFF;\n"
-"           padding: 6px;\n"
-"       }"));
 
         formLayout->setWidget(6, QFormLayout::FieldRole, txtCNP);
 
-        pushButton = new QPushButton(RegisterPage);
-        pushButton->setObjectName("pushButton");
-        pushButton->setGeometry(QRect(290, 340, 80, 23));
-        pushButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
-"            background-color: #6200EE;\n"
-"            color: #FFFFFF;\n"
-"            border: none;\n"
-"            border-radius: 8px;\n"
-"            padding: 5px;\n"
-"            font-size: 14px;\n"
-"        }\n"
-"        QPushButton:hover {\n"
-"            background-color: #3700B3;\n"
-"        }\n"
-"        QPushButton:pressed {\n"
-"            background-color: #BB86FC;\n"
-"        }"));
+
+        verticalLayout->addLayout(formLayout);
+
+        submitButton = new QPushButton(RegisterPage);
+        submitButton->setObjectName("submitButton");
+
+        verticalLayout->addWidget(submitButton, 0, Qt::AlignCenter);
+
 
         retranslateUi(RegisterPage);
 
@@ -240,15 +170,15 @@ public:
 
     void retranslateUi(QDialog *RegisterPage)
     {
-        RegisterPage->setWindowTitle(QCoreApplication::translate("RegisterPage", "New Registeration", nullptr));
-        label->setText(QCoreApplication::translate("RegisterPage", "Username:", nullptr));
-        label_2->setText(QCoreApplication::translate("RegisterPage", "Email:", nullptr));
-        label_3->setText(QCoreApplication::translate("RegisterPage", "Password:", nullptr));
-        label_4->setText(QCoreApplication::translate("RegisterPage", "Confirm Password:", nullptr));
+        RegisterPage->setWindowTitle(QCoreApplication::translate("RegisterPage", "\303\216nregistrare utilizator", nullptr));
+        label_username->setText(QCoreApplication::translate("RegisterPage", "Username:", nullptr));
+        label_email->setText(QCoreApplication::translate("RegisterPage", "Email:", nullptr));
+        label_password->setText(QCoreApplication::translate("RegisterPage", "Parol\304\203:", nullptr));
+        label_conf_password->setText(QCoreApplication::translate("RegisterPage", "Confirmare Parol\304\203:", nullptr));
         label_nume->setText(QCoreApplication::translate("RegisterPage", "Nume:", nullptr));
         label_prenume->setText(QCoreApplication::translate("RegisterPage", "Prenume:", nullptr));
         label_cnp->setText(QCoreApplication::translate("RegisterPage", "CNP:", nullptr));
-        pushButton->setText(QCoreApplication::translate("RegisterPage", "Submit", nullptr));
+        submitButton->setText(QCoreApplication::translate("RegisterPage", "\303\216nregistreaz\304\203", nullptr));
     } // retranslateUi
 
 };

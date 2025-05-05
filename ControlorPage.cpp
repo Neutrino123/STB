@@ -7,6 +7,8 @@ ControlorPage::ControlorPage(QWidget *parent)
     , ui(new Ui::ControlorPage) {
 
     ui->setupUi(this);
+    this->setFixedSize(800, 600);
+    this->setWindowFlags(this->windowFlags() & ~Qt::WindowCloseButtonHint);
 }
 
 ControlorPage::~ControlorPage(){

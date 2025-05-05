@@ -4,5 +4,10 @@
   <file>icons/notification.png</file>
   <file>icons/close.png</file>
   <file>icons/tramvai.jpg</file>
+  <file>icons/map.png</file>
+  <file>icons/administrative-fine.png</file>
+  <file>icons/ticket.png</file>
+  <file>icons/bus.png</file>
+  <file>icons/logout.png</file>
  </qresource>
 </RCC>

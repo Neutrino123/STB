@@ -2,6 +2,8 @@
 #define OFERAAMENDA_H
 
 #include <QWidget>
+#include "ErrorBox.h"
+#include "SuccessBox.h"
 
 namespace Ui {
 class OferaAmenda;
@@ -21,6 +23,8 @@ private slots:
 
 private:
     Ui::OferaAmenda *ui;
+    SuccessBox* successBox;
+    ErrorBox* errorBox;
 };
 
 #endif // OFERAAMENDA_H

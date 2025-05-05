@@ -29,7 +29,7 @@ public:
     {
         if (AmenziListPage->objectName().isEmpty())
             AmenziListPage->setObjectName("AmenziListPage");
-        AmenziListPage->resize(400, 600);
+        AmenziListPage->resize(250, 400);
         mainLayout = new QVBoxLayout(AmenziListPage);
         mainLayout->setObjectName("mainLayout");
         scrollArea = new QScrollArea(AmenziListPage);

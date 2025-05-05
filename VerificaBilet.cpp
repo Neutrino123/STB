@@ -8,29 +8,36 @@ VerificaBilet::VerificaBilet(QWidget *parent) :
     ui(new Ui::VerificaBilet)
 {
     ui->setupUi(this);
+    this->errorBox = new ErrorBox();
+    this->successBox = new SuccessBox();
 
-    // Exemplu: Conectare butoane (poți completa mai târziu)
-    // connect(ui->buttonVerifica, &QPushButton::clicked, this, &VerificaBilet::onVerificaClicked);
-    // connect(ui->buttonRenunta, &QPushButton::clicked, this, &VerificaBilet::close);
 }
 
 void VerificaBilet::on_verificaButton_clicked(){
 
     ServerConnection* server = new ServerConnection();
-    server->connectToServer("127.0.0.1", 12345);
+    server->readFromFile(":serverText/server.txt");
+    server->connectToServer(server->getIp(), server->getPort());
+    qDebug()<<server->getIp() <<" " << server->getPort();
+
     QString idBilet =  ui->labelIdBilet->text().trimmed();
     QString data = "verificaBilet|" + idBilet + "|";
     data += '\0';
-\
+
     server->sendData(data);
 
-    QString response = server->receiveData();
+   QString response = server->receiveData();
+
     if(response == "success"){
-        QMessageBox::information(this, "Success", "Bilet Valid");
+        this->successBox->setMessage("Biletul este valid!");
+        this->successBox->show();
+        this->close();
     }
     else{
-        QMessageBox::information(this, "Failed", "Bilet Invalid");
+        this->errorBox->setMessage("Biletul este invalid");
+        this->errorBox->show();
     }
+    delete server;
 
 }
 void VerificaBilet::on_renuntaButton_clicked(){

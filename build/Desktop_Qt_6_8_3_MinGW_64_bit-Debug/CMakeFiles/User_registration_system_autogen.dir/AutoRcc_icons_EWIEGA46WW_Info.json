@@ -11,7 +11,12 @@
 	[
 		"C:/Users/Andrei/Desktop/STB/icons/bell.png",
 		"C:/Users/Andrei/Desktop/STB/icons/notification.png",
+		"C:/Users/Andrei/Desktop/STB/icons/logout.png",
+		"C:/Users/Andrei/Desktop/STB/icons/map.png",
+		"C:/Users/Andrei/Desktop/STB/icons/ticket.png",
 		"C:/Users/Andrei/Desktop/STB/icons/tramvai.jpg",
+		"C:/Users/Andrei/Desktop/STB/icons/administrative-fine.png",
+		"C:/Users/Andrei/Desktop/STB/icons/bus.png",
 		"C:/Users/Andrei/Desktop/STB/icons/close.png"
 	],
 	"LOCK_FILE" : "C:/Users/Andrei/Desktop/STB/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/CMakeFiles/User_registration_system_autogen.dir/AutoRcc_icons_EWIEGA46WW_Lock.lock",

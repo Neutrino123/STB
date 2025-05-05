@@ -7,8 +7,8 @@
 #include <QDesktopServices>
 #include <QUrl>
 #include "NotificationPopup.h"
-
-
+#include "ErrorBox.h"
+#include "SuccessBox.h"
 
 
 MainPage::MainPage(QWidget *parent) :
@@ -17,13 +17,14 @@ MainPage::MainPage(QWidget *parent) :
 {
     ui->setupUi(this);
     this->welcomeLabel = ui->welcomeLabel;
-    this->biletePage = new TicketListPage();
     if(hasNotification()){
 
         QPushButton *notificationButton = ui->notificationButton;
         notificationButton->setIcon(QIcon(":/icons/icons/notification.png"));
 
     }
+    this->setFixedSize(800, 600);
+    this->setWindowFlags(this->windowFlags() & ~Qt::WindowCloseButtonHint);
 
 }
 
@@ -42,29 +43,48 @@ void MainPage::on_logoutButton_clicked(){
 void MainPage::on_veziAmenziButton_clicked(){
 
     //vom face de fiecare data un serverConnection pentru a primi amenzile;
-    // ServerConnection* server = new ServerConnection();
-    // server->connectToServer("127.0.0.1", 12345);
-    // QString data = "veziAmenzi|";
-    // data += '\0';
+    ServerConnection* server = new ServerConnection();
+    server->readFromFile(":serverText/server.txt");
+    server->connectToServer(server->getIp(), server->getPort());
+    qDebug()<<server->getIp() <<" " << server->getPort();
+    QString data = "veziAmenzi|";
+    data += '\0';
 
-    // server->sendData(data);
+    server->sendData(data);
 
-    // QString response = server->receiveData();
-    // if(response != ""){
+    QString response = server->receiveData();
+    if(response == "failed"){
 
+        SuccessBox* success = new SuccessBox();
+        success->setMessage("Nu ai nicio amenda");
+        success->show();
 
-    // }
+    }
+    else
+    {
+        QStringList amenziList = response.split(".");
+        AmenziListPage* amenziPage = new AmenziListPage();
 
-    AmenziListPage* amenziPage = new AmenziListPage();
+        for(int i = 0; i<amenziList.size()-1; i++){
+            qDebug() << amenziList[i];
+            QStringList infoAmenda = amenziList[i].split("|");
+            AmendaWidget* amenda = new AmendaWidget(infoAmenda[0], infoAmenda[1]);
+            amenziPage->adaugaAmenda(amenda);
+        }
 
-    AmendaWidget* amenda1 = new AmendaWidget();
-    AmendaWidget* amenda2 = new AmendaWidget();
-    amenziPage->adaugaAmenda(amenda1);
-    amenziPage->adaugaAmenda(amenda2);
+        amenziPage->show();
+    }
+    delete server;
+    // AmenziListPage* amenziPage = new AmenziListPage();
 
-    qDebug()<<"Am ajuns aici";
+    // AmendaWidget* amenda1 = new AmendaWidget();
+    // AmendaWidget* amenda2 = new AmendaWidget();
+    // amenziPage->adaugaAmenda(amenda1);
+    // amenziPage->adaugaAmenda(amenda2);
 
-    amenziPage->show();
+    // qDebug()<<"Am ajuns aici";
+
+    // amenziPage->show();
 }
 
 //  void MainPage::on_cumparaBiletButton_clicked(){
@@ -98,35 +118,40 @@ void MainPage::on_veziAmenziButton_clicked(){
 
 void MainPage::on_veziBiletButton_clicked(){
 
-    // if(this->bileteCumparatePage != nullptr){
-    //     this->bileteCumparatePage->show();
-    // }
-    // else
-    // {
-    //      qDebug() << "Nu ai cumparat inca bilet";
-    // }
-    if(biletePage != nullptr){
+    ServerConnection* server = new ServerConnection();
+    server->readFromFile(":serverText/server.txt");
+    server->connectToServer(server->getIp(), server->getPort());
 
-        //comunicare cu serverul pentru a primi biletele
-       // qDebug()<<"nu ai bilete cumparate";
-        // biletePage = new TicketListPage();
-        // TicketWidget* ticket = new TicketWidget();
-        // TicketWidget* ticket1 = new TicketWidget();
-        // TicketWidget* ticket2 = new TicketWidget();
-        // biletePage->adaugaBilet(ticket);
-        // biletePage->adaugaBilet(ticket1);
-        // biletePage->adaugaBilet(ticket2);
+    QString data = "bileteCumparate|";
+    data += '\0';
 
-        // biletePage->show();
-       this->biletePage->show();
+    server->sendData(data);
 
+    QString response = server->receiveData();
+    qDebug()<<response;
+
+    if(response == "failed"){
+        ErrorBox* error = new ErrorBox();
+        error->setMessage("Nu ai niciun bilet");
+        error->show();
     }
-    else
-    {
+    else{
+        QStringList bileteList = response.split(".");
+        TicketListPage* biletePage = new TicketListPage();
 
+        for(int i = 0; i<bileteList.size(); i++){
+            qDebug() << bileteList[i];
+            QStringList infoBilet = bileteList[i].split("|");
+            TicketWidget* bilet = new TicketWidget(infoBilet[0], infoBilet[1], infoBilet[2], infoBilet[3]);
+            biletePage->adaugaBilet(bilet);
+        }
+
+        biletePage->show();
     }
+    delete server;
 
 }
+
 void MainPage::on_veziHartaButton_clicked(){
 
   QDesktopServices::openUrl(QUrl("https://www.google.com/maps"));
@@ -159,7 +184,6 @@ void MainPage::on_cautaTraseuButton_clicked(){
     this->close();
     CautaTraseu* traseu = new CautaTraseu();
     traseu->setMainPagePointer(this);
-    //traseu->setBiletePagePointer(this->biletePage);
     traseu->show();
 
 }

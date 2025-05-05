@@ -7,6 +7,7 @@ NotificationLabel::NotificationLabel(QWidget *parent) :
     ui(new Ui::NotificationLabel)
 {
     ui->setupUi(this);
+    this->setFixedSize(182, 104);
 }
 
 NotificationLabel::~NotificationLabel()

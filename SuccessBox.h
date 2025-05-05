@@ -14,6 +14,7 @@ class SuccessBox : public QDialog
 public:
     explicit SuccessBox(QWidget *parent = nullptr);
     ~SuccessBox();
+    void setMessage(QString message);
 
 private slots:
     void on_buttonClose_clicked();

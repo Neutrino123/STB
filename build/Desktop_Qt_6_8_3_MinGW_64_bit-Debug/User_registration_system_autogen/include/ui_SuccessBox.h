@@ -31,7 +31,7 @@ public:
         SuccessBox->setStyleSheet(QString::fromUtf8("background-color: #1c1c1c; color: white;"));
         labelSuccess = new QLabel(SuccessBox);
         labelSuccess->setObjectName("labelSuccess");
-        labelSuccess->setGeometry(QRect(20, 30, 310, 40));
+        labelSuccess->setGeometry(QRect(10, 20, 310, 40));
         labelSuccess->setStyleSheet(QString::fromUtf8("color: #00FF88; font-weight: bold; font-size: 16px;"));
         buttonClose = new QPushButton(SuccessBox);
         buttonClose->setObjectName("buttonClose");

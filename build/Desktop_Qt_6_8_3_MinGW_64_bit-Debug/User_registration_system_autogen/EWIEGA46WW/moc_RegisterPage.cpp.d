@@ -366,4 +366,5 @@ C:/Users/Andrei/Desktop/STB/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/User_regis
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/time.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/vadefs.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h \
-  C:/Users/Andrei/Desktop/STB/DatabaseHeader.h
+  C:/Users/Andrei/Desktop/STB/DatabaseHeader.h \
+  C:/Users/Andrei/Desktop/STB/SuccessBox.h

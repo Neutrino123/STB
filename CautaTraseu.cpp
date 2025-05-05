@@ -10,6 +10,8 @@ CautaTraseu::CautaTraseu(QWidget *parent)
     , ui(new Ui::CautaTraseu)
 {
     ui->setupUi(this);
+    this->setFixedSize(500, 350);
+    this->error = new ErrorBox();
 }
 
 CautaTraseu::~CautaTraseu()
@@ -25,18 +27,23 @@ void CautaTraseu::on_cautaTraseuButton_clicked(){
     QString statieFinalaIntrodusa = ui->textBoxDestinatie->text().trimmed();
 
     ServerConnection* server = new ServerConnection();
-    server->connectToServer("127.0.0.1", 12345);
+    server->readFromFile(":serverText/server.txt");
+    server->connectToServer(server->getIp(), server->getPort());
+
     QString data = "cautaTraseu|" + statieInitialaIntrodusa + "|" + statieFinalaIntrodusa + "|";
     data += '\0';
     server->sendData(data);
 
-   // QString response = server->receiveData();
+   QString response = server->receiveData();
+    qDebug() << response;
 
-    QString response = "tramvai001|autobuz102|autobuz104|awdasd|asdss|asdasd|asdas|sss|ssssss|sssssssss|dwwwww|dfghgfd|sadafgh|wertyuiytrewq|wqertewq|";
+   // QString response = "tramvai001|autobuz102|autobuz104|awdasd|asdss|asdasd|asdas|sss|ssssss|sssssssss|dwwwww|dfghgfd|sadafgh|wertyuiytrewq|wqertewq|";
 
     if(response == "failed"){
 
         qDebug() << "Nu exista trasee pentru datele introduse mai sus";
+        this->error->setMessage("Nu există transport");
+        this->error->show();
 
     }
     else {
@@ -44,12 +51,14 @@ void CautaTraseu::on_cautaTraseuButton_clicked(){
         QStringList coduriList = response.split("|");
         RezultatePage* ptrRezultatPage = new RezultatePage();
 
-        for (const QString &cod : coduriList) {
-            qDebug() << cod;
-            ptrRezultatPage->adaugaRuta(cod);
+        for(int i = 0; i<coduriList.size()-1; i++){
+            qDebug() << coduriList[i];
+            ptrRezultatPage->adaugaRuta(coduriList[i]);
         }
+
         ptrRezultatPage->show();
     }
+    delete server;
 
     // QString statieInitiala, statieFinala;
     // statieInitiala = "Rahova";
@@ -87,13 +96,6 @@ void CautaTraseu::setMainPagePointer(MainPage* ptrMainPagee){
     this->ptrMainPage = ptrMainPagee;
 
 }
-// void CautaTraseu::setBiletePagePointer(TicketListPage* ptrBiletePage){
-
-//     this->biletePage = ptrBiletePage;
-
-// }
-
-
 
 void CautaTraseu::on_backButton_clicked(){
 

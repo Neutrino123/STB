@@ -157,6 +157,7 @@ C:/Users/Andrei/Desktop/STB/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/User_regis
   C:/Qt/6.8.3/mingw_64/include/QtNetwork/qtnetwork-config.h \
   C:/Qt/6.8.3/mingw_64/include/QtNetwork/qtnetworkexports.h \
   C:/Qt/6.8.3/mingw_64/include/QtNetwork/qtnetworkglobal.h \
+  C:/Qt/6.8.3/mingw_64/include/QtWidgets/QDialog \
   C:/Qt/6.8.3/mingw_64/include/QtWidgets/QLabel \
   C:/Qt/6.8.3/mingw_64/include/QtWidgets/QMainWindow \
   C:/Qt/6.8.3/mingw_64/include/QtWidgets/QPushButton \
@@ -166,6 +167,7 @@ C:/Users/Andrei/Desktop/STB/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/User_regis
   C:/Qt/6.8.3/mingw_64/include/QtWidgets/qabstractbutton.h \
   C:/Qt/6.8.3/mingw_64/include/QtWidgets/qabstractscrollarea.h \
   C:/Qt/6.8.3/mingw_64/include/QtWidgets/qboxlayout.h \
+  C:/Qt/6.8.3/mingw_64/include/QtWidgets/qdialog.h \
   C:/Qt/6.8.3/mingw_64/include/QtWidgets/qframe.h \
   C:/Qt/6.8.3/mingw_64/include/QtWidgets/qgridlayout.h \
   C:/Qt/6.8.3/mingw_64/include/QtWidgets/qlabel.h \
@@ -360,6 +362,7 @@ C:/Users/Andrei/Desktop/STB/build/Desktop_Qt_6_8_3_MinGW_64_bit-Debug/User_regis
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/time.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/vadefs.h \
   C:/Qt/Tools/mingw1310_64/x86_64-w64-mingw32/include/wchar.h \
+  C:/Users/Andrei/Desktop/STB/ErrorBox.h \
   C:/Users/Andrei/Desktop/STB/MainPage.h \
   C:/Users/Andrei/Desktop/STB/RezultatePage.h \
   C:/Users/Andrei/Desktop/STB/ServerConnection.h \

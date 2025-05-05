@@ -38,7 +38,6 @@ private:
     Ui::MainPage *ui;
     QString username;
     QLabel* welcomeLabel;
-    TicketListPage* biletePage;
 
 };
 

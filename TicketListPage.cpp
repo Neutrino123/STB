@@ -6,6 +6,7 @@ TicketListPage::TicketListPage(QWidget *parent) :
     ui(new Ui::TicketListPage)
 {
     ui->setupUi(this);
+    this->setFixedSize(250, 400);
 
     // Obținem layout-ul din scrollAreaWidgetContents
     ticketLayout = ui->scrollAreaWidgetContents->findChild<QVBoxLayout*>("ticketLayout");

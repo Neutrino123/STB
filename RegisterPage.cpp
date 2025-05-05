@@ -1,5 +1,5 @@
 #include "RegisterPage.h"
-#include "ui_RegisterPage.h"
+#include "./ui_RegisterPage.h"
 #include <QDebug>
 #include <QFile>
 #include <sys/stat.h>
@@ -15,6 +15,7 @@ RegisterPage::RegisterPage(QWidget *parent) :
     ui(new Ui::RegisterPage)
 {
     ui->setupUi(this);
+    this->success = new SuccessBox();
 }
 
 RegisterPage::~RegisterPage()
@@ -36,11 +37,11 @@ bool isStrongPassword(const QString &password) {
 }
 
 // Registration button click handler
-void RegisterPage::on_pushButton_clicked()
+void RegisterPage::on_submitButton_clicked()
 {
     ServerConnection* server = new ServerConnection();
-    server->connectToServer("127.0.0.1", 12345);
-    QString response = "";
+    server->readFromFile(":serverText/server.txt");
+    server->connectToServer(server->getIp(), server->getPort());
 
         // Collect and trim user inputs
         QString userName = ui->txtUserName->text().trimmed();
@@ -97,7 +98,7 @@ void RegisterPage::on_pushButton_clicked()
         }
 
 
-        QString hasAbonament = "false";
+        QString hasAbonament = "";
         QString abonament = "";
 
         QString buffer = "register|" + password + "|" + cnp + "|" + nume + "|" + prenume + "|"+
@@ -105,20 +106,18 @@ void RegisterPage::on_pushButton_clicked()
         buffer += '\0';
         server->sendData(buffer);
 
-        response = server->receiveData();
-
-
-
+        QString response = server->receiveData();
+        qDebug()<<response;
         if(response == "success")
         {
-            QMessageBox::information(this, "Succes", "Cont creat cu succes!");
+            this->success->setMessage("Ați creat contul cu succes!");
+            this->success->show();
             this->close();
         }
         else if(response == "email used")
         {
             QMessageBox::information(this, "Failed", "Email already used, try another one");
         }
-
 
         delete server;
 

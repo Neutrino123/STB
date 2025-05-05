@@ -12,7 +12,7 @@ class AmendaWidget : public QWidget
     Q_OBJECT
 
 public:
-    explicit AmendaWidget(QWidget *parent = nullptr);
+    explicit AmendaWidget(QString suma, QString motiv, QWidget *parent = nullptr);
     ~AmendaWidget();
 
 private slots:

@@ -2,6 +2,8 @@
 #define VERIFICABILET_H
 
 #include <QWidget>
+#include "ErrorBox.h"
+#include "SuccessBox.h"
 
 namespace Ui {
 class VerificaBilet;
@@ -15,6 +17,7 @@ public:
     explicit VerificaBilet(QWidget *parent = nullptr);
     ~VerificaBilet();
 
+
 private slots:
 
     void on_verificaButton_clicked();
@@ -22,6 +25,8 @@ private slots:
 
 private:
     Ui::VerificaBilet *ui;
+    SuccessBox* successBox;
+    ErrorBox* errorBox;
 };
 
 #endif // VERIFICABILET_H

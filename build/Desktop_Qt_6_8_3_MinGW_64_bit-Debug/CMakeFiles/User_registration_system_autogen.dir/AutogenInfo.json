@@ -353,7 +353,8 @@
 		"C:/Qt/6.8.3/mingw_64/lib/cmake/Qt6Network/Qt6QTlsBackendOpenSSLPluginTargets-relwithdebinfo.cmake",
 		"C:/Qt/6.8.3/mingw_64/lib/cmake/Qt6Network/Qt6QTlsBackendOpenSSLPluginAdditionalTargetInfo.cmake",
 		"C:/Qt/6.8.3/mingw_64/lib/cmake/Qt6Network/Qt6NetworkVersionlessAliasTargets.cmake",
-		"C:/Users/Andrei/Desktop/STB/icons.qrc"
+		"C:/Users/Andrei/Desktop/STB/icons.qrc",
+		"C:/Users/Andrei/Desktop/STB/fisiere_text.qrc"
 	],
 	"CMAKE_SOURCE_DIR" : "C:/Users/Andrei/Desktop/STB",
 	"CROSS_CONFIG" : false,
